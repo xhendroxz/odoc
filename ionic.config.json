@@ -1,0 +1,7 @@
+{
+  "name": "Odoc",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

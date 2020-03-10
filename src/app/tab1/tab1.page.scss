@@ -1,0 +1,90 @@
+ion-content ion-toolbar {
+  --background: translucent;
+}
+
+.seach-bar, .slides-subcategory, .slides-category{
+  padding: 0px 10px ;
+}
+.card-category{
+  box-shadow:none !important;
+  border-radius: 30px;
+  margin: 0px !important;
+  height: 250px ;
+  color: white !important;
+  margin-left: 10px !important;
+  width: 400px !important;
+}
+.title-category{
+  text-transform: initial !important;
+  font-size: 20px !important;
+  max-width: 100%;
+  width: 200px !important;
+  word-break: break-word !important;
+  text-align: left !important;
+}
+.doctor-category{
+  font-weight: normal !important;
+  font-size: 12px !important;
+  text-transform: initial !important;
+  padding-bottom: 20px !important;
+  text-align: left !important;
+}
+.image-category{
+  width: 100px !important;
+  height: auto !important;
+}
+.card-doc-item{
+  box-shadow: none !important;
+  border-radius: 15px;
+  height: 70px !important;
+  margin-top: 0px !important;
+  margin-bottom: 10px !important;
+}
+.card-doctor{
+  box-shadow: none !important;
+  border-radius: 15px;
+  height: 70px !important;
+  margin-top: 0px !important;
+  margin-bottom: 10px !important;
+}
+
+.picture-doctor{
+  width: 40px;
+  height: auto ; 
+  background: #F6BB7E;
+  padding: 5px;
+  border-radius: 10px;
+}
+.name-doctor{
+  font-size: 14px !important;
+}
+.det-doctor{
+  padding-left: 10px ;
+}
+.det-doctor p {
+  font-weight: bold;
+  font-size: 15px;
+}
+.det-doctor .specialist{
+  font-weight: normal;
+  font-size: 12px;
+  color: #424140;
+}
+.item-doctor{
+  margin: 0px 20px !important;
+  border-radius: 20px !important;
+  margin-bottom: 10px !important;
+}
+
+.category{
+  background: none;
+  color: #424140;
+}
+
+.btn-call{
+  box-shadow: none !important;
+}
+
+
+
+

@@ -1,0 +1,103 @@
+<ion-header > 
+  <ion-toolbar color="first">
+      <img src="/assets/logo.png" alt="" class="logo-image">       
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon slot="icon-only" ios="ellipsis-horizontal" color="light" md="ellipsis-vertical"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <div class="container">
+   <h1>Find Your <br>Consultation</h1>
+
+    <div class="seach-bar">
+      <ion-searchbar class="search-input"></ion-searchbar>
+    </div>
+
+   <h5>Categories</h5>
+      <ion-slides [options]="slideCategory" class="slides-category">
+
+        <ion-slide>
+          <ion-chip color="first" class="cat-active">
+            <ion-label>Adult</ion-label>
+          </ion-chip>
+        </ion-slide>
+
+        <ion-slide>
+          <ion-chip color="first" class="category">
+            <ion-label>Childerns</ion-label>
+          </ion-chip>
+        </ion-slide>
+
+        <ion-slide>
+          <ion-chip color="first" class="category">
+            <ion-label>Womens</ion-label>
+          </ion-chip>
+        </ion-slide>
+
+        <ion-slide>
+          <ion-chip color="first" class="category">
+            <ion-label>Mens</ion-label>
+          </ion-chip>
+        </ion-slide>
+        
+      </ion-slides>
+      
+      <br>
+    <ion-slides [options]="slideSubCategory" class="slides-subcategory">
+      
+      <ion-slide>
+        <ion-card class="card-category" color="first">
+          <ion-card-header>
+            <ion-card-subtitle class="title-category" >Chogh & <br>Cold</ion-card-subtitle>
+            <ion-card-subtitle class="doctor-category">11 Doctors</ion-card-subtitle>
+            <img src="/assets/category/batuk.png" alt="" class="image-category">
+          </ion-card-header>
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card class="card-category" color="second">
+          <ion-card-header>
+            <ion-card-subtitle class="title-category">Heart Specialist</ion-card-subtitle>
+            <ion-card-subtitle class="doctor-category">54 Doctors</ion-card-subtitle>
+            <img src="/assets/category/heart.png" alt="" class="image-category">
+          </ion-card-header>
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card class="card-category" color="third">
+          <ion-card-header>
+            <ion-card-subtitle class="title-category">Nutrition Specialist</ion-card-subtitle>
+            <ion-card-subtitle class="doctor-category">41 Doctors</ion-card-subtitle>
+            <img src="/assets/category/nutrion.png" alt="" class="image-category">
+          </ion-card-header>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+    <br>
+   <h5>Doctors</h5>
+
+    <ion-item lines="none" color="first-light" class="item-doctor">
+      <img src="/assets/doctors/1.png" class="picture-doctor" alt="" >
+      <div class="det-doctor">
+        <p><span class="l-orange">Doctor name</span><br><span class="specialist">Doctor specialist</span> </p>
+      </div>
+      <ion-button color="first" slot="end" class="btn-call" (click)="goDetail()"> <span class="l-white">Call</span> </ion-button>
+    </ion-item>
+
+    <ion-item lines="none" color="first-light" class="item-doctor">
+      <img src="/assets/doctors/1.png" class="picture-doctor" alt="" >
+      <div class="det-doctor">
+        <p><span class="l-orange">Doctor name</span><br><span class="specialist">Doctor specialist</span> </p>
+      </div>
+      <ion-button color="first" slot="end" class="btn-call" (click)="goDetail()"> <span class="l-white">Call</span> </ion-button>
+    </ion-item>
+
+  </div>
+  <br>
+</ion-content>

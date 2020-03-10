@@ -1,0 +1,67 @@
+<ion-header > 
+  <ion-toolbar color="first">
+      <img src="/assets/logo.png" alt="" class="logo-image">       
+      <ion-buttons slot="end">
+        <ion-button color="light" (click)="closePage()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <div class="container">
+    <table class="table-info">
+      <tr class="pic">
+        <td rowspan="3" width="150px">
+          <img src="/assets/doctors/1.png" class="image-doctor" alt="" >
+        </td>
+      </tr>
+      <tr>
+        <td width="215px" valign="top">
+          <div style="max-width: 200px;">
+            <h3>dr. Amelia Rifai, Sp.PD-KGEH</h3>
+            <span class="specialist">Gastroenterologi-Hepatologi </span>
+          </div>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ion-chip color="success">
+            <ion-icon class="contact" name="mail-outline"></ion-icon>
+          </ion-chip>
+          <ion-chip color="warning">
+            <ion-icon class="contact" name="call-outline"></ion-icon>
+          </ion-chip>
+          <ion-chip color="secondary">
+            <ion-icon class="contact" name="videocam-outline"></ion-icon>
+          </ion-chip>
+        </td>
+      </tr>
+    </table>
+    <div>
+      <h5>About</h5>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    </div>
+    <div class="info-doctor">
+      <div class="address-doctor">
+        <h6>Address</h6>
+        <p class="info">Batam Centre, Jl. Ahmad Yani, Tlk. Tering, Kec. Batam Kota, Kota Batam, Kepulauan Riau 29461</p>
+        <h6>Practice</h6>
+        <p class="info">Moday - Friday Open till 7 PM</p>
+
+      </div>
+      <div class="google-maps">
+        <iframe src="https://www.google.com/maps/d/embed?mid=1Iu_VVcenQGxJH0qJL_sqmbbxE8Q" width="600" height="450" frameborder="0" style="border:0" class="image-maps"></iframe>
+    </div>
+  </div>
+  <div class="schedule">
+    <ion-button color="first" slot="end" class="btn-schedule" > 
+      <span class="l-white">View List Of Schedule</span> 
+    </ion-button>
+  </div>
+
+  </div>
+  <br>
+</ion-content>

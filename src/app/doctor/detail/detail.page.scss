@@ -1,0 +1,97 @@
+.detail{
+   padding: 20px !important;
+   // height: 200px;
+ }
+ .info-doctor{
+   padding: 15px;
+   height: 150px;
+ }
+ 
+ ion-title {
+   position: static !important;
+   color: #332C2B;
+ }
+ .specialist{
+   font-size: 13px !important;
+   color: #696969;
+ }
+ .contact{
+  margin: 0px !important;
+ }
+ .image-doctor{
+   background-color: #F6BB7E;
+   border-radius: 20px !important;;
+   padding: 10px;
+   width: 150px !important;
+   height: auto;
+   float: left;
+   vertical-align:middle;
+ }
+ 
+ .image-maps{
+  //  background-color: #ddd;
+   border-radius: 20px !important;;
+  //  padding: 10px;
+   width: 120px !important;
+   height: 180px;
+   margin-right: 10px;
+   float: right;
+   vertical-align:middle;
+ }
+ 
+ p{
+   padding: 0px 20px !important;
+   margin: 0px !important;
+   font-size: 13px;
+   color: #696969;
+ }
+ .info{
+   padding: 0px 5px !important;
+   margin: 0px !important;
+   font-size: 13px;
+   color: #696969;
+ }
+ .info-doctor h6{
+   padding-left: 5px !important;
+ }
+ .address-doctor{
+   float: left;
+   max-width: 60%;
+ 
+ }
+ 
+ .table-info{
+   padding: 20px !important;
+   width: 100%;
+   border-collapse: unset;
+ }
+ .table-info tr > td{
+   padding-left: 10px;
+ }
+ 
+ .table-info tr.pic td{
+   padding: 0px;
+ }
+ 
+ .table-info h3{
+   color: #332C2B;
+   margin-top: 0px;
+   margin-bottom: 0px;
+ 
+ }
+ 
+ .schedule{
+   margin-top: 50px;
+   padding: 20px;
+   padding-left: 35px !important;
+   padding-left: 15px !important;
+
+ }
+ 
+ .btn-schedule{
+   font-size: 12px;
+   width: 100%;
+   max-width: 100%;
+   text-transform: initial;
+   color: white !important;
+ }
