@@ -1,13 +1,3 @@
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[76], {
   /***/
   "./node_modules/@ionic/core/dist/esm/ion-virtual-scroll.entry.js":
@@ -41,53 +31,31 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /*! ./config-3c7f3790.js */
     "./node_modules/@ionic/core/dist/esm/config-3c7f3790.js");
 
-    var CELL_TYPE_ITEM = 'item';
-    var CELL_TYPE_HEADER = 'header';
-    var CELL_TYPE_FOOTER = 'footer';
-    var NODE_CHANGE_NONE = 0;
-    var NODE_CHANGE_POSITION = 1;
-    var NODE_CHANGE_CELL = 2;
-    var MIN_READS = 2;
+    const CELL_TYPE_ITEM = 'item';
+    const CELL_TYPE_HEADER = 'header';
+    const CELL_TYPE_FOOTER = 'footer';
+    const NODE_CHANGE_NONE = 0;
+    const NODE_CHANGE_POSITION = 1;
+    const NODE_CHANGE_CELL = 2;
+    const MIN_READS = 2;
 
-    var updateVDom = function updateVDom(dom, heightIndex, cells, range) {
+    const updateVDom = (dom, heightIndex, cells, range) => {
       // reset dom
-      var _iteratorNormalCompletion = true;
-      var _didIteratorError = false;
-      var _iteratorError = undefined;
+      for (const node of dom) {
+        node.change = NODE_CHANGE_NONE;
+        node.d = true;
+      } // try to match into exisiting dom
 
-      try {
-        for (var _iterator = dom[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-          var node = _step.value;
-          node.change = NODE_CHANGE_NONE;
-          node.d = true;
-        } // try to match into exisiting dom
 
-      } catch (err) {
-        _didIteratorError = true;
-        _iteratorError = err;
-      } finally {
-        try {
-          if (!_iteratorNormalCompletion && _iterator.return != null) {
-            _iterator.return();
-          }
-        } finally {
-          if (_didIteratorError) {
-            throw _iteratorError;
-          }
-        }
-      }
+      const toMutate = [];
+      const end = range.offset + range.length;
 
-      var toMutate = [];
-      var end = range.offset + range.length;
-
-      var _loop = function _loop(i) {
-        var cell = cells[i];
-        var node = dom.find(function (n) {
-          return n.d && n.cell === cell;
-        });
+      for (let i = range.offset; i < end; i++) {
+        const cell = cells[i];
+        const node = dom.find(n => n.d && n.cell === cell);
 
         if (node) {
-          var top = heightIndex[i];
+          const top = heightIndex[i];
 
           if (top !== node.top) {
             node.top = top;
@@ -98,23 +66,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         } else {
           toMutate.push(cell);
         }
-      };
-
-      for (var i = range.offset; i < end; i++) {
-        _loop(i);
       } // needs to append
 
 
-      var pool = dom.filter(function (n) {
-        return n.d;
-      });
+      const pool = dom.filter(n => n.d);
 
-      var _loop2 = function _loop2() {
-        var cell = _toMutate[_i];
-        var node = pool.find(function (n) {
-          return n.d && n.cell.type === cell.type;
-        });
-        var index = cell.i;
+      for (const cell of toMutate) {
+        const node = pool.find(n => n.d && n.cell.type === cell.type);
+        const index = cell.i;
 
         if (node) {
           node.d = false;
@@ -124,43 +83,35 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         } else {
           dom.push({
             d: false,
-            cell: cell,
+            cell,
             visible: true,
             change: NODE_CHANGE_CELL,
             top: heightIndex[index]
           });
         }
-      };
-
-      for (var _i = 0, _toMutate = toMutate; _i < _toMutate.length; _i++) {
-        _loop2();
       }
 
-      dom.filter(function (n) {
-        return n.d && n.top !== -9999;
-      }).forEach(function (n) {
+      dom.filter(n => n.d && n.top !== -9999).forEach(n => {
         n.change = NODE_CHANGE_POSITION;
         n.top = -9999;
       });
     };
 
-    var doRender = function doRender(el, nodeRender, dom, updateCellHeight) {
-      var children = Array.from(el.children).filter(function (n) {
-        return n.tagName !== 'TEMPLATE';
-      });
-      var childrenNu = children.length;
-      var child;
+    const doRender = (el, nodeRender, dom, updateCellHeight) => {
+      const children = Array.from(el.children).filter(n => n.tagName !== 'TEMPLATE');
+      const childrenNu = children.length;
+      let child;
 
-      for (var i = 0; i < dom.length; i++) {
-        var node = dom[i];
-        var cell = node.cell; // the cell change, the content must be updated
+      for (let i = 0; i < dom.length; i++) {
+        const node = dom[i];
+        const cell = node.cell; // the cell change, the content must be updated
 
         if (node.change === NODE_CHANGE_CELL) {
           if (i < childrenNu) {
             child = children[i];
             nodeRender(child, cell, i);
           } else {
-            var newChild = createNode(el, cell.type);
+            const newChild = createNode(el, cell.type);
             child = nodeRender(newChild, cell, i) || newChild;
             child.classList.add('virtual-item');
             el.appendChild(child);
@@ -177,7 +128,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         } // update visibility
 
 
-        var visible = cell.visible;
+        const visible = cell.visible;
 
         if (node.visible !== visible) {
           if (visible) {
@@ -197,8 +148,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }
     };
 
-    var createNode = function createNode(el, type) {
-      var template = getTemplate(el, type);
+    const createNode = (el, type) => {
+      const template = getTemplate(el, type);
 
       if (template && el.ownerDocument) {
         return el.ownerDocument.importNode(template.content, true).children[0];
@@ -207,7 +158,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       return null;
     };
 
-    var getTemplate = function getTemplate(el, type) {
+    const getTemplate = (el, type) => {
       switch (type) {
         case CELL_TYPE_ITEM:
           return el.querySelector('template:not([name])');
@@ -220,18 +171,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }
     };
 
-    var getViewport = function getViewport(scrollTop, vierportHeight, margin) {
+    const getViewport = (scrollTop, vierportHeight, margin) => {
       return {
         top: Math.max(scrollTop - margin, 0),
         bottom: scrollTop + vierportHeight + margin
       };
     };
 
-    var getRange = function getRange(heightIndex, viewport, buffer) {
-      var topPos = viewport.top;
-      var bottomPos = viewport.bottom; // find top index
+    const getRange = (heightIndex, viewport, buffer) => {
+      const topPos = viewport.top;
+      const bottomPos = viewport.bottom; // find top index
 
-      var i = 0;
+      let i = 0;
 
       for (; i < heightIndex.length; i++) {
         if (heightIndex[i] > topPos) {
@@ -239,7 +190,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         }
       }
 
-      var offset = Math.max(i - buffer - 1, 0); // find bottom index
+      const offset = Math.max(i - buffer - 1, 0); // find bottom index
 
       for (; i < heightIndex.length; i++) {
         if (heightIndex[i] >= bottomPos) {
@@ -247,60 +198,58 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         }
       }
 
-      var end = Math.min(i + buffer, heightIndex.length);
-      var length = end - offset;
+      const end = Math.min(i + buffer, heightIndex.length);
+      const length = end - offset;
       return {
-        offset: offset,
-        length: length
+        offset,
+        length
       };
     };
 
-    var getShouldUpdate = function getShouldUpdate(dirtyIndex, currentRange, range) {
-      var end = range.offset + range.length;
+    const getShouldUpdate = (dirtyIndex, currentRange, range) => {
+      const end = range.offset + range.length;
       return dirtyIndex <= end || currentRange.offset !== range.offset || currentRange.length !== range.length;
     };
 
-    var findCellIndex = function findCellIndex(cells, index) {
-      var max = cells.length > 0 ? cells[cells.length - 1].index : 0;
+    const findCellIndex = (cells, index) => {
+      const max = cells.length > 0 ? cells[cells.length - 1].index : 0;
 
       if (index === 0) {
         return 0;
       } else if (index === max + 1) {
         return cells.length;
       } else {
-        return cells.findIndex(function (c) {
-          return c.index === index;
-        });
+        return cells.findIndex(c => c.index === index);
       }
     };
 
-    var inplaceUpdate = function inplaceUpdate(dst, src, offset) {
+    const inplaceUpdate = (dst, src, offset) => {
       if (offset === 0 && src.length >= dst.length) {
         return src;
       }
 
-      for (var i = 0; i < src.length; i++) {
+      for (let i = 0; i < src.length; i++) {
         dst[i + offset] = src[i];
       }
 
       return dst;
     };
 
-    var _calcCells = function calcCells(items, itemHeight, headerHeight, footerHeight, headerFn, footerFn, approxHeaderHeight, approxFooterHeight, approxItemHeight, j, offset, len) {
-      var cells = [];
-      var end = len + offset;
+    const calcCells = (items, itemHeight, headerHeight, footerHeight, headerFn, footerFn, approxHeaderHeight, approxFooterHeight, approxItemHeight, j, offset, len) => {
+      const cells = [];
+      const end = len + offset;
 
-      for (var i = offset; i < end; i++) {
-        var item = items[i];
+      for (let i = offset; i < end; i++) {
+        const item = items[i];
 
         if (headerFn) {
-          var value = headerFn(item, i, items);
+          const value = headerFn(item, i, items);
 
           if (value != null) {
             cells.push({
               i: j++,
               type: CELL_TYPE_HEADER,
-              value: value,
+              value,
               index: i,
               height: headerHeight ? headerHeight(value, i) : approxHeaderHeight,
               reads: headerHeight ? 0 : MIN_READS,
@@ -320,15 +269,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         });
 
         if (footerFn) {
-          var _value = footerFn(item, i, items);
+          const value = footerFn(item, i, items);
 
-          if (_value != null) {
+          if (value != null) {
             cells.push({
               i: j++,
               type: CELL_TYPE_FOOTER,
-              value: _value,
+              value,
               index: i,
-              height: footerHeight ? footerHeight(_value, i) : approxFooterHeight,
+              height: footerHeight ? footerHeight(value, i) : approxFooterHeight,
               reads: footerHeight ? 0 : MIN_READS,
               visible: !!footerHeight
             });
@@ -339,10 +288,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       return cells;
     };
 
-    var _calcHeightIndex = function calcHeightIndex(buf, cells, index) {
-      var acum = buf[index];
+    const calcHeightIndex = (buf, cells, index) => {
+      let acum = buf[index];
 
-      for (var i = index; i < buf.length; i++) {
+      for (let i = index; i < buf.length; i++) {
         buf[i] = acum;
         acum += cells[i].height;
       }
@@ -350,7 +299,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       return acum;
     };
 
-    var resizeBuffer = function resizeBuffer(buf, len) {
+    const resizeBuffer = (buf, len) => {
       if (!buf) {
         return new Uint32Array(len);
       }
@@ -358,7 +307,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       if (buf.length === len) {
         return buf;
       } else if (len > buf.length) {
-        var newBuf = new Uint32Array(len);
+        const newBuf = new Uint32Array(len);
         newBuf.set(buf);
         return newBuf;
       } else {
@@ -366,10 +315,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }
     };
 
-    var positionForIndex = function positionForIndex(index, cells, heightIndex) {
-      var cell = cells.find(function (c) {
-        return c.type === CELL_TYPE_ITEM && c.index === index;
-      });
+    const positionForIndex = (index, cells, heightIndex) => {
+      const cell = cells.find(c => c.type === CELL_TYPE_ITEM && c.index === index);
 
       if (cell) {
         return heightIndex[cell.i];
@@ -378,12 +325,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       return -1;
     };
 
-    var VirtualScroll = /*#__PURE__*/function () {
-      function VirtualScroll(hostRef) {
-        var _this = this;
-
-        _classCallCheck(this, VirtualScroll);
-
+    const VirtualScroll = class {
+      constructor(hostRef) {
         Object(_core_0a8d4d2e_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
         this.range = {
           offset: 0,
@@ -434,417 +377,305 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         this.approxFooterHeight = 30;
 
-        this.onScroll = function () {
-          _this.updateVirtualScroll();
+        this.onScroll = () => {
+          this.updateVirtualScroll();
         };
       }
 
-      _createClass(VirtualScroll, [{
-        key: "itemsChanged",
-        value: function itemsChanged() {
-          this.calcCells();
-          this.updateVirtualScroll();
+      itemsChanged() {
+        this.calcCells();
+        this.updateVirtualScroll();
+      }
+
+      async connectedCallback() {
+        const contentEl = this.el.closest('ion-content');
+
+        if (!contentEl) {
+          console.error('<ion-virtual-scroll> must be used inside an <ion-content>');
+          return;
         }
-      }, {
-        key: "connectedCallback",
-        value: function () {
-          var _connectedCallback = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-            var contentEl;
-            return regeneratorRuntime.wrap(function _callee$(_context) {
-              while (1) {
-                switch (_context.prev = _context.next) {
-                  case 0:
-                    contentEl = this.el.closest('ion-content');
 
-                    if (contentEl) {
-                      _context.next = 4;
-                      break;
-                    }
+        this.scrollEl = await contentEl.getScrollElement();
+        this.contentEl = contentEl;
+        this.calcCells();
+        this.updateState();
+      }
 
-                    console.error('<ion-virtual-scroll> must be used inside an <ion-content>');
-                    return _context.abrupt("return");
+      componentDidUpdate() {
+        this.updateState();
+      }
 
-                  case 4:
-                    _context.next = 6;
-                    return contentEl.getScrollElement();
+      disconnectedCallback() {
+        this.scrollEl = undefined;
+      }
 
-                  case 6:
-                    this.scrollEl = _context.sent;
-                    this.contentEl = contentEl;
-                    this.calcCells();
-                    this.updateState();
+      onResize() {
+        this.calcCells();
+        this.updateVirtualScroll();
+      }
+      /**
+       * Returns the position of the virtual item at the given index.
+       */
 
-                  case 10:
-                  case "end":
-                    return _context.stop();
-                }
-              }
-            }, _callee, this);
-          }));
 
-          function connectedCallback() {
-            return _connectedCallback.apply(this, arguments);
-          }
+      positionForItem(index) {
+        return Promise.resolve(positionForIndex(index, this.cells, this.getHeightIndex()));
+      }
+      /**
+       * This method marks a subset of items as dirty, so they can be re-rendered. Items should be marked as
+       * dirty any time the content or their style changes.
+       *
+       * The subset of items to be updated can are specifing by an offset and a length.
+       */
 
-          return connectedCallback;
-        }()
-      }, {
-        key: "componentDidUpdate",
-        value: function componentDidUpdate() {
-          this.updateState();
+
+      async checkRange(offset, len = -1) {
+        // TODO: kind of hacky how we do in-place updated of the cells
+        // array. this part needs a complete refactor
+        if (!this.items) {
+          return;
         }
-      }, {
-        key: "disconnectedCallback",
-        value: function disconnectedCallback() {
-          this.scrollEl = undefined;
+
+        const length = len === -1 ? this.items.length - offset : len;
+        const cellIndex = findCellIndex(this.cells, offset);
+        const cells = calcCells(this.items, this.itemHeight, this.headerHeight, this.footerHeight, this.headerFn, this.footerFn, this.approxHeaderHeight, this.approxFooterHeight, this.approxItemHeight, cellIndex, offset, length);
+        this.cells = inplaceUpdate(this.cells, cells, cellIndex);
+        this.lastItemLen = this.items.length;
+        this.indexDirty = Math.max(offset - 1, 0);
+        this.scheduleUpdate();
+      }
+      /**
+       * This method marks the tail the items array as dirty, so they can be re-rendered.
+       *
+       * It's equivalent to calling:
+       *
+       * ```js
+       * virtualScroll.checkRange(lastItemLen);
+       * ```
+       */
+
+
+      async checkEnd() {
+        if (this.items) {
+          this.checkRange(this.lastItemLen);
         }
-      }, {
-        key: "onResize",
-        value: function onResize() {
-          this.calcCells();
-          this.updateVirtualScroll();
-        }
-        /**
-         * Returns the position of the virtual item at the given index.
-         */
+      }
 
-      }, {
-        key: "positionForItem",
-        value: function positionForItem(index) {
-          return Promise.resolve(positionForIndex(index, this.cells, this.getHeightIndex()));
-        }
-        /**
-         * This method marks a subset of items as dirty, so they can be re-rendered. Items should be marked as
-         * dirty any time the content or their style changes.
-         *
-         * The subset of items to be updated can are specifing by an offset and a length.
-         */
-
-      }, {
-        key: "checkRange",
-        value: function () {
-          var _checkRange = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(offset) {
-            var len,
-                length,
-                cellIndex,
-                cells,
-                _args2 = arguments;
-            return regeneratorRuntime.wrap(function _callee2$(_context2) {
-              while (1) {
-                switch (_context2.prev = _context2.next) {
-                  case 0:
-                    len = _args2.length > 1 && _args2[1] !== undefined ? _args2[1] : -1;
-
-                    if (this.items) {
-                      _context2.next = 3;
-                      break;
-                    }
-
-                    return _context2.abrupt("return");
-
-                  case 3:
-                    length = len === -1 ? this.items.length - offset : len;
-                    cellIndex = findCellIndex(this.cells, offset);
-                    cells = _calcCells(this.items, this.itemHeight, this.headerHeight, this.footerHeight, this.headerFn, this.footerFn, this.approxHeaderHeight, this.approxFooterHeight, this.approxItemHeight, cellIndex, offset, length);
-                    this.cells = inplaceUpdate(this.cells, cells, cellIndex);
-                    this.lastItemLen = this.items.length;
-                    this.indexDirty = Math.max(offset - 1, 0);
-                    this.scheduleUpdate();
-
-                  case 10:
-                  case "end":
-                    return _context2.stop();
-                }
-              }
-            }, _callee2, this);
-          }));
-
-          function checkRange(_x) {
-            return _checkRange.apply(this, arguments);
-          }
-
-          return checkRange;
-        }()
-        /**
-         * This method marks the tail the items array as dirty, so they can be re-rendered.
-         *
-         * It's equivalent to calling:
-         *
-         * ```js
-         * virtualScroll.checkRange(lastItemLen);
-         * ```
-         */
-
-      }, {
-        key: "checkEnd",
-        value: function () {
-          var _checkEnd = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
-            return regeneratorRuntime.wrap(function _callee3$(_context3) {
-              while (1) {
-                switch (_context3.prev = _context3.next) {
-                  case 0:
-                    if (this.items) {
-                      this.checkRange(this.lastItemLen);
-                    }
-
-                  case 1:
-                  case "end":
-                    return _context3.stop();
-                }
-              }
-            }, _callee3, this);
-          }));
-
-          function checkEnd() {
-            return _checkEnd.apply(this, arguments);
-          }
-
-          return checkEnd;
-        }()
-      }, {
-        key: "updateVirtualScroll",
-        value: function updateVirtualScroll() {
-          // do nothing if virtual-scroll is disabled
-          if (!this.isEnabled || !this.scrollEl) {
-            return;
-          } // unschedule future updates
+      updateVirtualScroll() {
+        // do nothing if virtual-scroll is disabled
+        if (!this.isEnabled || !this.scrollEl) {
+          return;
+        } // unschedule future updates
 
 
-          if (this.timerUpdate) {
-            clearTimeout(this.timerUpdate);
-            this.timerUpdate = undefined;
-          } // schedule DOM operations into the stencil queue
-
-
-          Object(_core_0a8d4d2e_js__WEBPACK_IMPORTED_MODULE_0__["f"])(this.readVS.bind(this));
-          Object(_core_0a8d4d2e_js__WEBPACK_IMPORTED_MODULE_0__["w"])(this.writeVS.bind(this));
-        }
-      }, {
-        key: "readVS",
-        value: function readVS() {
-          var contentEl = this.contentEl,
-              scrollEl = this.scrollEl,
-              el = this.el;
-          var topOffset = 0;
-          var node = el;
-
-          while (node && node !== contentEl) {
-            topOffset += node.offsetTop;
-            node = node.parentElement;
-          }
-
-          this.viewportOffset = topOffset;
-
-          if (scrollEl) {
-            this.viewportHeight = scrollEl.offsetHeight;
-            this.currentScrollTop = scrollEl.scrollTop;
-          }
-        }
-      }, {
-        key: "writeVS",
-        value: function writeVS() {
-          var dirtyIndex = this.indexDirty; // get visible viewport
-
-          var scrollTop = this.currentScrollTop - this.viewportOffset;
-          var viewport = getViewport(scrollTop, this.viewportHeight, 100); // compute lazily the height index
-
-          var heightIndex = this.getHeightIndex(); // get array bounds of visible cells base in the viewport
-
-          var range = getRange(heightIndex, viewport, 2); // fast path, do nothing
-
-          var shouldUpdate = getShouldUpdate(dirtyIndex, this.range, range);
-
-          if (!shouldUpdate) {
-            return;
-          }
-
-          this.range = range; // in place mutation of the virtual DOM
-
-          updateVDom(this.virtualDom, heightIndex, this.cells, range); // Write DOM
-          // Different code paths taken depending of the render API used
-
-          if (this.nodeRender) {
-            doRender(this.el, this.nodeRender, this.virtualDom, this.updateCellHeight.bind(this));
-          } else if (this.domRender) {
-            this.domRender(this.virtualDom);
-          } else if (this.renderItem) {
-            this.el.forceUpdate();
-          }
-        }
-      }, {
-        key: "updateCellHeight",
-        value: function updateCellHeight(cell, node) {
-          var _this2 = this;
-
-          var update = function update() {
-            if (node['$ionCell'] === cell) {
-              var style = window.getComputedStyle(node);
-              var height = node.offsetHeight + parseFloat(style.getPropertyValue('margin-bottom'));
-
-              _this2.setCellHeight(cell, height);
-            }
-          };
-
-          if (node && node.componentOnReady) {
-            node.componentOnReady().then(update);
-          } else {
-            update();
-          }
-        }
-      }, {
-        key: "setCellHeight",
-        value: function setCellHeight(cell, height) {
-          var index = cell.i; // the cell might changed since the height update was scheduled
-
-          if (cell !== this.cells[index]) {
-            return;
-          }
-
-          if (cell.height !== height || cell.visible !== true) {
-            cell.visible = true;
-            cell.height = height;
-            this.indexDirty = Math.min(this.indexDirty, index);
-            this.scheduleUpdate();
-          }
-        }
-      }, {
-        key: "scheduleUpdate",
-        value: function scheduleUpdate() {
-          var _this3 = this;
-
+        if (this.timerUpdate) {
           clearTimeout(this.timerUpdate);
-          this.timerUpdate = setTimeout(function () {
-            return _this3.updateVirtualScroll();
-          }, 100);
+          this.timerUpdate = undefined;
+        } // schedule DOM operations into the stencil queue
+
+
+        Object(_core_0a8d4d2e_js__WEBPACK_IMPORTED_MODULE_0__["f"])(this.readVS.bind(this));
+        Object(_core_0a8d4d2e_js__WEBPACK_IMPORTED_MODULE_0__["w"])(this.writeVS.bind(this));
+      }
+
+      readVS() {
+        const {
+          contentEl,
+          scrollEl,
+          el
+        } = this;
+        let topOffset = 0;
+        let node = el;
+
+        while (node && node !== contentEl) {
+          topOffset += node.offsetTop;
+          node = node.parentElement;
         }
-      }, {
-        key: "updateState",
-        value: function updateState() {
-          var shouldEnable = !!(this.scrollEl && this.cells);
 
-          if (shouldEnable !== this.isEnabled) {
-            this.enableScrollEvents(shouldEnable);
+        this.viewportOffset = topOffset;
 
-            if (shouldEnable) {
-              this.updateVirtualScroll();
-            }
+        if (scrollEl) {
+          this.viewportHeight = scrollEl.offsetHeight;
+          this.currentScrollTop = scrollEl.scrollTop;
+        }
+      }
+
+      writeVS() {
+        const dirtyIndex = this.indexDirty; // get visible viewport
+
+        const scrollTop = this.currentScrollTop - this.viewportOffset;
+        const viewport = getViewport(scrollTop, this.viewportHeight, 100); // compute lazily the height index
+
+        const heightIndex = this.getHeightIndex(); // get array bounds of visible cells base in the viewport
+
+        const range = getRange(heightIndex, viewport, 2); // fast path, do nothing
+
+        const shouldUpdate = getShouldUpdate(dirtyIndex, this.range, range);
+
+        if (!shouldUpdate) {
+          return;
+        }
+
+        this.range = range; // in place mutation of the virtual DOM
+
+        updateVDom(this.virtualDom, heightIndex, this.cells, range); // Write DOM
+        // Different code paths taken depending of the render API used
+
+        if (this.nodeRender) {
+          doRender(this.el, this.nodeRender, this.virtualDom, this.updateCellHeight.bind(this));
+        } else if (this.domRender) {
+          this.domRender(this.virtualDom);
+        } else if (this.renderItem) {
+          this.el.forceUpdate();
+        }
+      }
+
+      updateCellHeight(cell, node) {
+        const update = () => {
+          if (node['$ionCell'] === cell) {
+            const style = window.getComputedStyle(node);
+            const height = node.offsetHeight + parseFloat(style.getPropertyValue('margin-bottom'));
+            this.setCellHeight(cell, height);
+          }
+        };
+
+        if (node && node.componentOnReady) {
+          node.componentOnReady().then(update);
+        } else {
+          update();
+        }
+      }
+
+      setCellHeight(cell, height) {
+        const index = cell.i; // the cell might changed since the height update was scheduled
+
+        if (cell !== this.cells[index]) {
+          return;
+        }
+
+        if (cell.height !== height || cell.visible !== true) {
+          cell.visible = true;
+          cell.height = height;
+          this.indexDirty = Math.min(this.indexDirty, index);
+          this.scheduleUpdate();
+        }
+      }
+
+      scheduleUpdate() {
+        clearTimeout(this.timerUpdate);
+        this.timerUpdate = setTimeout(() => this.updateVirtualScroll(), 100);
+      }
+
+      updateState() {
+        const shouldEnable = !!(this.scrollEl && this.cells);
+
+        if (shouldEnable !== this.isEnabled) {
+          this.enableScrollEvents(shouldEnable);
+
+          if (shouldEnable) {
+            this.updateVirtualScroll();
           }
         }
-      }, {
-        key: "calcCells",
-        value: function calcCells() {
-          if (!this.items) {
-            return;
-          }
+      }
 
-          this.lastItemLen = this.items.length;
-          this.cells = _calcCells(this.items, this.itemHeight, this.headerHeight, this.footerHeight, this.headerFn, this.footerFn, this.approxHeaderHeight, this.approxFooterHeight, this.approxItemHeight, 0, 0, this.lastItemLen);
-          this.indexDirty = 0;
+      calcCells() {
+        if (!this.items) {
+          return;
         }
-      }, {
-        key: "getHeightIndex",
-        value: function getHeightIndex() {
-          if (this.indexDirty !== Infinity) {
-            this.calcHeightIndex(this.indexDirty);
-          }
 
-          return this.heightIndex;
+        this.lastItemLen = this.items.length;
+        this.cells = calcCells(this.items, this.itemHeight, this.headerHeight, this.footerHeight, this.headerFn, this.footerFn, this.approxHeaderHeight, this.approxFooterHeight, this.approxItemHeight, 0, 0, this.lastItemLen);
+        this.indexDirty = 0;
+      }
+
+      getHeightIndex() {
+        if (this.indexDirty !== Infinity) {
+          this.calcHeightIndex(this.indexDirty);
         }
-      }, {
-        key: "calcHeightIndex",
-        value: function calcHeightIndex() {
-          var index = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-          // TODO: optimize, we don't need to calculate all the cells
-          this.heightIndex = resizeBuffer(this.heightIndex, this.cells.length);
-          this.totalHeight = _calcHeightIndex(this.heightIndex, this.cells, index);
-          this.indexDirty = Infinity;
+
+        return this.heightIndex;
+      }
+
+      calcHeightIndex(index = 0) {
+        // TODO: optimize, we don't need to calculate all the cells
+        this.heightIndex = resizeBuffer(this.heightIndex, this.cells.length);
+        this.totalHeight = calcHeightIndex(this.heightIndex, this.cells, index);
+        this.indexDirty = Infinity;
+      }
+
+      enableScrollEvents(shouldListen) {
+        if (this.rmEvent) {
+          this.rmEvent();
+          this.rmEvent = undefined;
         }
-      }, {
-        key: "enableScrollEvents",
-        value: function enableScrollEvents(shouldListen) {
-          var _this4 = this;
 
-          if (this.rmEvent) {
-            this.rmEvent();
-            this.rmEvent = undefined;
-          }
+        const scrollEl = this.scrollEl;
 
-          var scrollEl = this.scrollEl;
+        if (scrollEl) {
+          this.isEnabled = shouldListen;
+          scrollEl.addEventListener('scroll', this.onScroll);
 
-          if (scrollEl) {
-            this.isEnabled = shouldListen;
-            scrollEl.addEventListener('scroll', this.onScroll);
-
-            this.rmEvent = function () {
-              scrollEl.removeEventListener('scroll', _this4.onScroll);
-            };
-          }
-        }
-      }, {
-        key: "renderVirtualNode",
-        value: function renderVirtualNode(node) {
-          var _node$cell = node.cell,
-              type = _node$cell.type,
-              value = _node$cell.value,
-              index = _node$cell.index;
-
-          switch (type) {
-            case CELL_TYPE_ITEM:
-              return this.renderItem(value, index);
-
-            case CELL_TYPE_HEADER:
-              return this.renderHeader(value, index);
-
-            case CELL_TYPE_FOOTER:
-              return this.renderFooter(value, index);
-          }
-        }
-      }, {
-        key: "render",
-        value: function render() {
-          var _this5 = this;
-
-          return Object(_core_0a8d4d2e_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_core_0a8d4d2e_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
-            style: {
-              height: "".concat(this.totalHeight, "px")
-            }
-          }, this.renderItem && Object(_core_0a8d4d2e_js__WEBPACK_IMPORTED_MODULE_0__["h"])(VirtualProxy, {
-            dom: this.virtualDom
-          }, this.virtualDom.map(function (node) {
-            return _this5.renderVirtualNode(node);
-          })));
-        }
-      }, {
-        key: "el",
-        get: function get() {
-          return Object(_core_0a8d4d2e_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this);
-        }
-      }], [{
-        key: "watchers",
-        get: function get() {
-          return {
-            "itemHeight": ["itemsChanged"],
-            "headerHeight": ["itemsChanged"],
-            "footerHeight": ["itemsChanged"],
-            "items": ["itemsChanged"]
+          this.rmEvent = () => {
+            scrollEl.removeEventListener('scroll', this.onScroll);
           };
         }
-      }, {
-        key: "style",
-        get: function get() {
-          return "ion-virtual-scroll{display:block;position:relative;width:100%;contain:strict;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}ion-virtual-scroll>.virtual-loading{opacity:0}ion-virtual-scroll>.virtual-item{position:absolute!important;top:0!important;right:0!important;left:0!important;-webkit-transition-duration:0ms;transition-duration:0ms;will-change:transform}";
+      }
+
+      renderVirtualNode(node) {
+        const {
+          type,
+          value,
+          index
+        } = node.cell;
+
+        switch (type) {
+          case CELL_TYPE_ITEM:
+            return this.renderItem(value, index);
+
+          case CELL_TYPE_HEADER:
+            return this.renderHeader(value, index);
+
+          case CELL_TYPE_FOOTER:
+            return this.renderFooter(value, index);
         }
-      }]);
+      }
 
-      return VirtualScroll;
-    }();
+      render() {
+        return Object(_core_0a8d4d2e_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_core_0a8d4d2e_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
+          style: {
+            height: "".concat(this.totalHeight, "px")
+          }
+        }, this.renderItem && Object(_core_0a8d4d2e_js__WEBPACK_IMPORTED_MODULE_0__["h"])(VirtualProxy, {
+          dom: this.virtualDom
+        }, this.virtualDom.map(node => this.renderVirtualNode(node))));
+      }
 
-    var VirtualProxy = function VirtualProxy(_ref, children, utils) {
-      var dom = _ref.dom;
-      return utils.map(children, function (child, i) {
-        var node = dom[i];
-        var vattrs = child.vattrs || {};
-        var classes = vattrs.class || '';
+      get el() {
+        return Object(_core_0a8d4d2e_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this);
+      }
+
+      static get watchers() {
+        return {
+          "itemHeight": ["itemsChanged"],
+          "headerHeight": ["itemsChanged"],
+          "footerHeight": ["itemsChanged"],
+          "items": ["itemsChanged"]
+        };
+      }
+
+      static get style() {
+        return "ion-virtual-scroll{display:block;position:relative;width:100%;contain:strict;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}ion-virtual-scroll>.virtual-loading{opacity:0}ion-virtual-scroll>.virtual-item{position:absolute!important;top:0!important;right:0!important;left:0!important;-webkit-transition-duration:0ms;transition-duration:0ms;will-change:transform}";
+      }
+
+    };
+
+    const VirtualProxy = ({
+      dom
+    }, children, utils) => {
+      return utils.map(children, (child, i) => {
+        const node = dom[i];
+        const vattrs = child.vattrs || {};
+        let classes = vattrs.class || '';
         classes += 'virtual-item ';
 
         if (!node.visible) {

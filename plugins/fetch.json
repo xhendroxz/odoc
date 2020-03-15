@@ -10,7 +10,7 @@
   "cordova-plugin-statusbar": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-statusbar@^2.4.2"
+      "id": "cordova-plugin-statusbar@2.4.2"
     },
     "is_top_level": true,
     "variables": {}
@@ -19,6 +19,14 @@
     "source": {
       "type": "registry",
       "id": "cordova-plugin-device@2.0.2"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-splashscreen": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-splashscreen@5.0.2"
     },
     "is_top_level": true,
     "variables": {}

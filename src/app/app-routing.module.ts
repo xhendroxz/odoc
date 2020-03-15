@@ -7,16 +7,16 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
     path: 'detail',
     loadChildren: () => import('./doctor/detail/detail.module').then( m => m.DetailPageModule)
-  },
-  {
-    path: 'schedule',
-    loadChildren: () => import('./doctor/schedule/schedule.module').then( m => m.SchedulePageModule)
-  },
-  {
-    path: 'dailypost',
-    loadChildren: () => import('./doctor/dailypost/dailypost.module').then( m => m.DailypostPageModule)
   },
   {
     path: 'news-detail',

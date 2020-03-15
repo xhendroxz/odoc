@@ -1,11 +1,10 @@
 <ion-header > 
-  <ion-toolbar color="first">
+  <ion-toolbar color="white" class="headersss">
       <img src="/assets/logo.png" alt="" class="logo-image">       
       <ion-buttons slot="end">
-        <ion-button color="light" (click)="closePage()">
-        <ion-icon name="close"></ion-icon>
-      </ion-button>
-    </ion-buttons>
+        <ion-button color="dark" (click)="closePage()"> <ion-icon name="close"></ion-icon>
+        </ion-button>
+      </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -20,8 +19,8 @@
       <tr>
         <td width="215px" valign="top">
           <div style="max-width: 200px;">
-            <h3>dr. Amelia Rifai, Sp.PD-KGEH</h3>
-            <span class="specialist">Gastroenterologi-Hepatologi </span>
+            <h3>dr. Ahmar Abyadh, Sp.PD-KGEH., FINASIM</h3>
+            <span class="specialist">Spesialis Penyakit Dalam (Gastroenterologi-Hepatologi) </span>
           </div>
           
         </td>
@@ -46,20 +45,59 @@
     </div>
     <div class="info-doctor">
       <div class="address-doctor">
-        <h6>Address</h6>
-        <p class="info">Batam Centre, Jl. Ahmad Yani, Tlk. Tering, Kec. Batam Kota, Kota Batam, Kepulauan Riau 29461</p>
-        <h6>Practice</h6>
-        <p class="info">Moday - Friday Open till 7 PM</p>
+        <h6>Practice Address</h6>
+        <p class="info">
+          <b>Columbia Asia Hospital Pulomas.</b> No.1, Jl. Kayu Putih Raya, Kayu Putih, Kec. Pulo Gadung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta</p>
+        <h6>Practice Time</h6>
+        <p class="info">Senin - jumat dari 06.00 - 18.00 WIB</p>
 
       </div>
       <div class="google-maps">
-        <iframe src="https://www.google.com/maps/d/embed?mid=1Iu_VVcenQGxJH0qJL_sqmbbxE8Q" width="600" height="450" frameborder="0" style="border:0" class="image-maps"></iframe>
+        <iframe class="image-maps" src="https://maps.google.com/maps?q=%20Columbia%20Asia%20Hospital%20Pulomas&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
     </div>
   </div>
   <div class="schedule">
-    <ion-button color="first" slot="end" class="btn-schedule" > 
-      <span class="l-white">View List Of Schedule</span> 
+    <ion-button color="first" slot="end" (click)="schedule()" class="btn-schedule" > 
+      <span class="l-white">{{textBtn}}</span> 
     </ion-button>
+  </div>
+  <div *ngIf="opt">
+    <ion-list>
+      <ion-item>
+        <ion-label>
+          <h3>Lorem Ipsum</h3>
+        </ion-label>
+        <ion-label slot="end"><p style="text-align: right ;padding: 0px !important;">Senin, 09.00 WIB</p></ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>
+          <h3>Lorem Ipsum</h3>
+        </ion-label>
+        <ion-label slot="end"><p style="text-align: right ;padding: 0px !important;">Selasa, 15.00 WIB</p></ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>
+          <h3>Lorem Ipsum</h3>
+        </ion-label>
+        <ion-label slot="end"><p style="text-align: right ;padding: 0px !important;">Rabu, 11.00 WIB</p></ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>
+          <h3>Lorem Ipsum</h3>
+        </ion-label>
+        <ion-label slot="end"><p style="text-align: right ;padding: 0px !important;">Kamis, 09.00 WIB</p></ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>
+          <h3>Lorem Ipsum</h3>
+        </ion-label>
+        <ion-label slot="end"><p style="text-align: right ;padding: 0px !important;">Jumat, 13.00 WIB</p></ion-label>
+      </ion-item>
+    </ion-list>
   </div>
 
   </div>

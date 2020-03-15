@@ -47,6 +47,10 @@ h1,h5,h6{
    font-weight: bold;
    color: #332C2B;
 }
+
+.l-dark{
+  color: #332C2B;
+}
  
 .sc-ion-searchbar-md{
    border-radius: 30px !important;
@@ -64,6 +68,13 @@ h1,h5,h6{
    text-transform: capitalize !important;
 
  }
+
+ .headersss{
+  border-bottom: 1px solid #e8e8e8 !important;
+ }
+ .header-md::after {
+    display: none;
+  }
 
  ion-button{
    --box-shadow:none;

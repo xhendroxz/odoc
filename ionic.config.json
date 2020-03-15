@@ -1,6 +1,7 @@
 {
   "name": "Odoc",
   "integrations": {
+    "capacitor": {},
     "cordova": {}
   },
   "type": "angular"

@@ -22,7 +22,7 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-      this.statusBar.backgroundColorByHexString("#E09D55");
+      this.statusBar.backgroundColorByHexString("#ffffff");
     });
   }
 }

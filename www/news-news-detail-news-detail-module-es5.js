@@ -1,5 +1,3 @@
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["news-news-detail-news-detail-module"], {
   /***/
   "./src/app/news/news-detail/news-detail-routing.module.ts":
@@ -45,15 +43,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ./news-detail.page */
     "./src/app/news/news-detail/news-detail.page.ts");
 
-    var routes = [{
+    const routes = [{
       path: '',
       component: _news_detail_page__WEBPACK_IMPORTED_MODULE_3__["NewsDetailPage"]
     }];
-
-    var NewsDetailPageRoutingModule = function NewsDetailPageRoutingModule() {
-      _classCallCheck(this, NewsDetailPageRoutingModule);
-    };
-
+    let NewsDetailPageRoutingModule = class NewsDetailPageRoutingModule {};
     NewsDetailPageRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
       imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(routes)],
       exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
@@ -123,10 +117,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ./news-detail.page */
     "./src/app/news/news-detail/news-detail.page.ts");
 
-    var NewsDetailPageModule = function NewsDetailPageModule() {
-      _classCallCheck(this, NewsDetailPageModule);
-    };
-
+    let NewsDetailPageModule = class NewsDetailPageModule {};
     NewsDetailPageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
       imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _news_detail_routing_module__WEBPACK_IMPORTED_MODULE_5__["NewsDetailPageRoutingModule"]],
       declarations: [_news_detail_page__WEBPACK_IMPORTED_MODULE_6__["NewsDetailPage"]]

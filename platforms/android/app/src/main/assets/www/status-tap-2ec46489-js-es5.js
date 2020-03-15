@@ -31,25 +31,23 @@
     /*! ./config-3c7f3790.js */
     "./node_modules/@ionic/core/dist/esm/config-3c7f3790.js");
 
-    var startStatusTap = function startStatusTap() {
-      var win = window;
-      win.addEventListener('statusTap', function () {
-        Object(_core_0a8d4d2e_js__WEBPACK_IMPORTED_MODULE_0__["f"])(function () {
-          var width = win.innerWidth;
-          var height = win.innerHeight;
-          var el = document.elementFromPoint(width / 2, height / 2);
+    const startStatusTap = () => {
+      const win = window;
+      win.addEventListener('statusTap', () => {
+        Object(_core_0a8d4d2e_js__WEBPACK_IMPORTED_MODULE_0__["f"])(() => {
+          const width = win.innerWidth;
+          const height = win.innerHeight;
+          const el = document.elementFromPoint(width / 2, height / 2);
 
           if (!el) {
             return;
           }
 
-          var contentEl = el.closest('ion-content');
+          const contentEl = el.closest('ion-content');
 
           if (contentEl) {
-            contentEl.componentOnReady().then(function () {
-              Object(_core_0a8d4d2e_js__WEBPACK_IMPORTED_MODULE_0__["w"])(function () {
-                return contentEl.scrollToTop(300);
-              });
+            contentEl.componentOnReady().then(() => {
+              Object(_core_0a8d4d2e_js__WEBPACK_IMPORTED_MODULE_0__["w"])(() => contentEl.scrollToTop(300));
             });
           }
         });

@@ -31,34 +31,34 @@
     /*! ./index-c38df685.js */
     "./node_modules/@ionic/core/dist/esm/index-c38df685.js");
 
-    var createSwipeBackGesture = function createSwipeBackGesture(el, canStartHandler, onStartHandler, onMoveHandler, onEndHandler) {
-      var win = el.ownerDocument.defaultView;
+    const createSwipeBackGesture = (el, canStartHandler, onStartHandler, onMoveHandler, onEndHandler) => {
+      const win = el.ownerDocument.defaultView;
 
-      var canStart = function canStart(detail) {
+      const canStart = detail => {
         return detail.startX <= 50 && canStartHandler();
       };
 
-      var onMove = function onMove(detail) {
+      const onMove = detail => {
         // set the transition animation's progress
-        var delta = detail.deltaX;
-        var stepValue = delta / win.innerWidth;
+        const delta = detail.deltaX;
+        const stepValue = delta / win.innerWidth;
         onMoveHandler(stepValue);
       };
 
-      var onEnd = function onEnd(detail) {
+      const onEnd = detail => {
         // the swipe back gesture has ended
-        var delta = detail.deltaX;
-        var width = win.innerWidth;
-        var stepValue = delta / width;
-        var velocity = detail.velocityX;
-        var z = width / 2.0;
-        var shouldComplete = velocity >= 0 && (velocity > 0.2 || detail.deltaX > z);
-        var missing = shouldComplete ? 1 - stepValue : stepValue;
-        var missingDistance = missing * width;
-        var realDur = 0;
+        const delta = detail.deltaX;
+        const width = win.innerWidth;
+        const stepValue = delta / width;
+        const velocity = detail.velocityX;
+        const z = width / 2.0;
+        const shouldComplete = velocity >= 0 && (velocity > 0.2 || detail.deltaX > z);
+        const missing = shouldComplete ? 1 - stepValue : stepValue;
+        const missingDistance = missing * width;
+        let realDur = 0;
 
         if (missingDistance > 5) {
-          var dur = missingDistance / Math.abs(velocity);
+          const dur = missingDistance / Math.abs(velocity);
           realDur = Math.min(dur, 540);
         }
         /**
@@ -72,14 +72,14 @@
       };
 
       return Object(_index_c38df685_js__WEBPACK_IMPORTED_MODULE_1__["createGesture"])({
-        el: el,
+        el,
         gestureName: 'goback-swipe',
         gesturePriority: 40,
         threshold: 10,
-        canStart: canStart,
+        canStart,
         onStart: onStartHandler,
-        onMove: onMove,
-        onEnd: onEnd
+        onMove,
+        onEnd
       });
     };
     /***/

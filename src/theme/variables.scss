@@ -5,6 +5,13 @@
 /** Ionic CSS Variables **/
 :root {
 
+  --ion-color-white: #ffffff;
+  --ion-color-white-rgb: 255,255,255;
+  --ion-color-white-contrast: #000000;
+  --ion-color-white-contrast-rgb: 0,0,0;
+  --ion-color-white-shade: #e0e0e0;
+  --ion-color-white-tint: #ffffff;
+
   --ion-color-first: #F6BB7E;
   --ion-color-first-rgb: 252,130,0;
   --ion-color-first-contrast: #000000;
@@ -33,6 +40,15 @@
   --ion-color-third-shade: #ccb3b3;
   --ion-color-third-tint: #ead0d0;
 
+  .ion-color-white {
+    --ion-color-base: var(--ion-color-white);
+    --ion-color-base-rgb: var(--ion-color-white-rgb);
+    --ion-color-contrast: var(--ion-color-white-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-white-contrast-rgb);
+    --ion-color-shade: var(--ion-color-white-shade);
+    --ion-color-tint: var(--ion-color-white-tint);
+  }
+  
   .ion-color-first-light {
     --ion-color-base: var(--ion-color-first-light);
     --ion-color-base-rgb: var(--ion-color-first-light-rgb);

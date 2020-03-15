@@ -1,5 +1,3 @@
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["tabs-tabs-module"], {
   /***/
   "./node_modules/raw-loader/dist/cjs.js!./src/app/tabs/tabs.page.html":
@@ -65,50 +63,38 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ./tabs.page */
     "./src/app/tabs/tabs.page.ts");
 
-    var routes = [{
+    const routes = [{
       path: 'tabs',
       component: _tabs_page__WEBPACK_IMPORTED_MODULE_3__["TabsPage"],
       children: [{
         path: 'tab1',
         children: [{
           path: '',
-          loadChildren: function loadChildren() {
-            return Promise.all(
-            /*! import() | tab1-tab1-module */
-            [__webpack_require__.e("common"), __webpack_require__.e("tab1-tab1-module")]).then(__webpack_require__.bind(null,
-            /*! ../tab1/tab1.module */
-            "./src/app/tab1/tab1.module.ts")).then(function (m) {
-              return m.Tab1PageModule;
-            });
-          }
+          loadChildren: () => Promise.all(
+          /*! import() | tab1-tab1-module */
+          [__webpack_require__.e("common"), __webpack_require__.e("tab1-tab1-module")]).then(__webpack_require__.bind(null,
+          /*! ../tab1/tab1.module */
+          "./src/app/tab1/tab1.module.ts")).then(m => m.Tab1PageModule)
         }]
       }, {
         path: 'tab2',
         children: [{
           path: '',
-          loadChildren: function loadChildren() {
-            return Promise.all(
-            /*! import() | tab2-tab2-module */
-            [__webpack_require__.e("common"), __webpack_require__.e("tab2-tab2-module")]).then(__webpack_require__.bind(null,
-            /*! ../tab2/tab2.module */
-            "./src/app/tab2/tab2.module.ts")).then(function (m) {
-              return m.Tab2PageModule;
-            });
-          }
+          loadChildren: () => Promise.all(
+          /*! import() | tab2-tab2-module */
+          [__webpack_require__.e("common"), __webpack_require__.e("tab2-tab2-module")]).then(__webpack_require__.bind(null,
+          /*! ../tab2/tab2.module */
+          "./src/app/tab2/tab2.module.ts")).then(m => m.Tab2PageModule)
         }]
       }, {
         path: 'tab3',
         children: [{
           path: '',
-          loadChildren: function loadChildren() {
-            return Promise.all(
-            /*! import() | tab3-tab3-module */
-            [__webpack_require__.e("common"), __webpack_require__.e("tab3-tab3-module")]).then(__webpack_require__.bind(null,
-            /*! ../tab3/tab3.module */
-            "./src/app/tab3/tab3.module.ts")).then(function (m) {
-              return m.Tab3PageModule;
-            });
-          }
+          loadChildren: () => Promise.all(
+          /*! import() | tab3-tab3-module */
+          [__webpack_require__.e("common"), __webpack_require__.e("tab3-tab3-module")]).then(__webpack_require__.bind(null,
+          /*! ../tab3/tab3.module */
+          "./src/app/tab3/tab3.module.ts")).then(m => m.Tab3PageModule)
         }]
       }, {
         path: '',
@@ -117,14 +103,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }]
     }, {
       path: '',
-      redirectTo: '/tabs/tab1',
+      redirectTo: '/login',
       pathMatch: 'full'
     }];
-
-    var TabsPageRoutingModule = function TabsPageRoutingModule() {
-      _classCallCheck(this, TabsPageRoutingModule);
-    };
-
+    let TabsPageRoutingModule = class TabsPageRoutingModule {};
     TabsPageRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
       imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(routes)],
       exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
@@ -194,10 +176,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ./tabs.page */
     "./src/app/tabs/tabs.page.ts");
 
-    var TabsPageModule = function TabsPageModule() {
-      _classCallCheck(this, TabsPageModule);
-    };
-
+    let TabsPageModule = class TabsPageModule {};
     TabsPageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
       imports: [_ionic_angular__WEBPACK_IMPORTED_MODULE_1__["IonicModule"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"], _tabs_routing_module__WEBPACK_IMPORTED_MODULE_5__["TabsPageRoutingModule"]],
       declarations: [_tabs_page__WEBPACK_IMPORTED_MODULE_6__["TabsPage"]]
@@ -257,10 +236,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var TabsPage = function TabsPage() {
-      _classCallCheck(this, TabsPage);
-    };
+    let TabsPage = class TabsPage {
+      constructor() {}
 
+    };
     TabsPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-tabs',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(

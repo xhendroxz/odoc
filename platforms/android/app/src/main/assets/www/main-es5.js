@@ -1,9 +1,3 @@
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"], {
   /***/
   "./$$_lazy_route_resource lazy recursive":
@@ -186,7 +180,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-header > \n  <ion-toolbar color=\"first\">\n      <img src=\"/assets/logo.png\" alt=\"\" class=\"logo-image\">       \n      <ion-buttons slot=\"end\">\n        <ion-button color=\"light\" (click)=\"closePage()\">\n        <ion-icon name=\"close\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content >\n  <div class=\"container\">\n    <table class=\"table-info\">\n      <tr class=\"pic\">\n        <td rowspan=\"3\" width=\"150px\">\n          <img src=\"/assets/doctors/1.png\" class=\"image-doctor\" alt=\"\" >\n        </td>\n      </tr>\n      <tr>\n        <td width=\"215px\" valign=\"top\">\n          <div style=\"max-width: 200px;\">\n            <h3>dr. Amelia Rifai, Sp.PD-KGEH</h3>\n            <span class=\"specialist\">Gastroenterologi-Hepatologi </span>\n          </div>\n          \n        </td>\n      </tr>\n      <tr>\n        <td>\n          <ion-chip color=\"success\">\n            <ion-icon class=\"contact\" name=\"mail-outline\"></ion-icon>\n          </ion-chip>\n          <ion-chip color=\"warning\">\n            <ion-icon class=\"contact\" name=\"call-outline\"></ion-icon>\n          </ion-chip>\n          <ion-chip color=\"secondary\">\n            <ion-icon class=\"contact\" name=\"videocam-outline\"></ion-icon>\n          </ion-chip>\n        </td>\n      </tr>\n    </table>\n    <div>\n      <h5>About</h5>\n      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>\n    </div>\n    <div class=\"info-doctor\">\n      <div class=\"address-doctor\">\n        <h6>Address</h6>\n        <p class=\"info\">Batam Centre, Jl. Ahmad Yani, Tlk. Tering, Kec. Batam Kota, Kota Batam, Kepulauan Riau 29461</p>\n        <h6>Practice</h6>\n        <p class=\"info\">Moday - Friday Open till 7 PM</p>\n\n      </div>\n      <div class=\"google-maps\">\n        <iframe src=\"https://www.google.com/maps/d/embed?mid=1Iu_VVcenQGxJH0qJL_sqmbbxE8Q\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" class=\"image-maps\"></iframe>\n    </div>\n  </div>\n  <div class=\"schedule\">\n    <ion-button color=\"first\" slot=\"end\" class=\"btn-schedule\" > \n      <span class=\"l-white\">View List Of Schedule</span> \n    </ion-button>\n\n    <div style=\"display: none;\">\n      \n      <ion-item>\n        <p>asdasd</p>\n      </ion-item>\n\n      <ion-item>\n        <p>asdasd</p>\n      </ion-item>\n\n      <ion-item>\n        <p>asdasd</p>\n      </ion-item>\n\n    </div>\n  </div>\n\n  </div>\n  <br>\n</ion-content>";
+    __webpack_exports__["default"] = "<ion-header > \n  <ion-toolbar color=\"white\" class=\"headersss\">\n      <img src=\"/assets/logo.png\" alt=\"\" class=\"logo-image\">       \n      <ion-buttons slot=\"end\">\n        <ion-button color=\"dark\" (click)=\"closePage()\"> <ion-icon name=\"close\"></ion-icon>\n        </ion-button>\n      </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content >\n  <div class=\"container\">\n    <table class=\"table-info\">\n      <tr class=\"pic\">\n        <td rowspan=\"3\" width=\"150px\">\n          <img src=\"/assets/doctors/1.png\" class=\"image-doctor\" alt=\"\" >\n        </td>\n      </tr>\n      <tr>\n        <td width=\"215px\" valign=\"top\">\n          <div style=\"max-width: 200px;\">\n            <h3>dr. Ahmar Abyadh, Sp.PD-KGEH., FINASIM</h3>\n            <span class=\"specialist\">Spesialis Penyakit Dalam (Gastroenterologi-Hepatologi) </span>\n          </div>\n          \n        </td>\n      </tr>\n      <tr>\n        <td>\n          <ion-chip color=\"success\">\n            <ion-icon class=\"contact\" name=\"mail-outline\"></ion-icon>\n          </ion-chip>\n          <ion-chip color=\"warning\">\n            <ion-icon class=\"contact\" name=\"call-outline\"></ion-icon>\n          </ion-chip>\n          <ion-chip color=\"secondary\">\n            <ion-icon class=\"contact\" name=\"videocam-outline\"></ion-icon>\n          </ion-chip>\n        </td>\n      </tr>\n    </table>\n    <div>\n      <h5>About</h5>\n      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>\n    </div>\n    <div class=\"info-doctor\">\n      <div class=\"address-doctor\">\n        <h6>Practice Address</h6>\n        <p class=\"info\">\n          <b>Columbia Asia Hospital Pulomas.</b> No.1, Jl. Kayu Putih Raya, Kayu Putih, Kec. Pulo Gadung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta</p>\n        <h6>Practice Time</h6>\n        <p class=\"info\">Senin - jumat dari 06.00 - 18.00 WIB</p>\n\n      </div>\n      <div class=\"google-maps\">\n        <iframe class=\"image-maps\" src=\"https://maps.google.com/maps?q=%20Columbia%20Asia%20Hospital%20Pulomas&t=&z=13&ie=UTF8&iwloc=&output=embed\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\"></iframe>\n    </div>\n  </div>\n  <div class=\"schedule\">\n    <ion-button color=\"first\" slot=\"end\" (click)=\"schedule()\" class=\"btn-schedule\" > \n      <span class=\"l-white\">{{textBtn}}</span> \n    </ion-button>\n  </div>\n  <div *ngIf=\"opt\">\n    <ion-list>\n      <ion-item>\n        <ion-label>\n          <h3>Lorem Ipsum</h3>\n        </ion-label>\n        <ion-label slot=\"end\"><p style=\"text-align: right ;padding: 0px !important;\">Senin, 09.00 WIB</p></ion-label>\n      </ion-item>\n\n      <ion-item>\n        <ion-label>\n          <h3>Lorem Ipsum</h3>\n        </ion-label>\n        <ion-label slot=\"end\"><p style=\"text-align: right ;padding: 0px !important;\">Selasa, 15.00 WIB</p></ion-label>\n      </ion-item>\n\n      <ion-item>\n        <ion-label>\n          <h3>Lorem Ipsum</h3>\n        </ion-label>\n        <ion-label slot=\"end\"><p style=\"text-align: right ;padding: 0px !important;\">Rabu, 11.00 WIB</p></ion-label>\n      </ion-item>\n\n      <ion-item>\n        <ion-label>\n          <h3>Lorem Ipsum</h3>\n        </ion-label>\n        <ion-label slot=\"end\"><p style=\"text-align: right ;padding: 0px !important;\">Kamis, 09.00 WIB</p></ion-label>\n      </ion-item>\n\n      <ion-item>\n        <ion-label>\n          <h3>Lorem Ipsum</h3>\n        </ion-label>\n        <ion-label slot=\"end\"><p style=\"text-align: right ;padding: 0px !important;\">Jumat, 13.00 WIB</p></ion-label>\n      </ion-item>\n    </ion-list>\n  </div>\n\n  </div>\n  <br>\n</ion-content>";
     /***/
   },
 
@@ -206,7 +200,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-header > \n    <ion-toolbar color=\"first\">\n        <img src=\"/assets/logo.png\" alt=\"\" class=\"logo-image\">       \n        <ion-buttons slot=\"end\">\n          <ion-button color=\"light\" (click)=\"closePage()\">\n          <ion-icon name=\"close\"></ion-icon>\n        </ion-button>\n      </ion-buttons>\n    </ion-toolbar>\n  </ion-header>\n  \n  <ion-content >\n    <div class=\"container\">\n      <!-- <table class=\"table-info\">\n        <tr class=\"pic\">\n          <td rowspan=\"3\" width=\"150px\">\n            <img src=\"/assets/doctors/1.png\" class=\"image-doctor\" alt=\"\" >\n          </td>\n        </tr>\n        <tr>\n          <td width=\"215px\" valign=\"top\">\n            <div style=\"max-width: 200px;\">\n              <h3>dr. Amelia Rifai, Sp.PD-KGEH</h3>\n              <span class=\"specialist\">Gastroenterologi-Hepatologi </span>\n            </div>\n            \n          </td>\n        </tr>\n        <tr>\n          <td>\n            <ion-chip color=\"success\">\n              <ion-icon class=\"contact\" name=\"mail-outline\"></ion-icon>\n            </ion-chip>\n            <ion-chip color=\"warning\">\n              <ion-icon class=\"contact\" name=\"call-outline\"></ion-icon>\n            </ion-chip>\n            <ion-chip color=\"secondary\">\n              <ion-icon class=\"contact\" name=\"videocam-outline\"></ion-icon>\n            </ion-chip>\n          </td>\n        </tr>\n      </table> -->\n      <div class=\"content-news\">\n        <h5>Kasusnya Bertambah, 6 WNI Positif Virus Corona di Indonesia</h5>\n        <p>Ditinjau oleh <span>dr. Rizal Fadli </span></p>\n        <p>09 Maret 2020</p>\n        <img src=\"/assets/news/news1.jpg\" class=\"picture-news\" alt=\"\" >\n        <p>Jakarta - Virus corona (korona) Wuhan yang memasuki wilayah Indonesia sejak Senin (2/3), kini perlahan terus bertambah. Awalnya kasus ini menjangkiti WNI yang berdomisili di Depok, Jawa Barat. Keduanya kini masih dalam perawatan isolasi di Rumah Sakit Penyakit Infeksi Sulianti Saroso, Jakarta. </p>\n        <p>Kedua kasus ini disebut sebagai kasus 1 dan 2. Namun, menurut keterangan dari Kementerian Kesehatan RI dalam rilis Sehat Negeriku!, pada Jumat (6/3) dan Minggu (8/3) jumlah kasus virus corona di Indonesia bertambah. </p>\n        <p>Dengan kata lain, saat ini terdapat 6 WNI di Indonesia yang positif mengidap virus corona penyebab COVID-19. Nah, berikut ulasan lengkapnya. </p>\n        \n        <h6>Cluster Jakarta, Hasil Tracking 80 Orang</h6>\n        <p>Achmad Yurianto selaku Juru Bicara Pemerintah Indonesia untuk COVID-19 mengonfirmasi, terdapat 2 pasien positif mengidap COVID-19. kedua kasus baru (kasus 3 dan 4) disampaikannya pada Jumat (6/3) di Istana Kepresidenan. </p>\n        <p>Penemuan kasus 3 dan 4 ini merupakan hasil tracking terhadap kasus 1. Dinas Kesehatan Provinsi DKI Jakarta bersama Kepolisian RI dan Badan Intelijen Negara (BIN), telah mengidentifikasi 80 orang yang berada dalam sebuah acara bersama pasien (kasus) 1 di Jakarta. Dalam acara ini, pasien 1 terjangkit virus corona dari warga negara Jepang yang tinggi di Malaysia. </p>\n        <p> 80 orang orang tersebut jumlahnya mengerucut jadi 20 orang. Dari situ pemerintah terus mendalami kasusnya, hingga membawa 7 orang ke RSPI Sulianti Saroso. Pemerintah melakukan serangkaian pemeriksaan dan isolasi pada ke 7 orang tersebut. Sebab mereka mengalami gejala-gejala infeksi virus corona, seperti influenza meski dalam kategori sedang.  </p>\n        <p>“Dari 7 orang ini kita dapatkan dua orang confirm positif yang kami sebut sebagai kasus no 3 dan kasus no 4, Saya dapat laporan terakhir siang ini kasus 3 dan kasus 4 suhu badannya 37,6 dan 37,7 derajat Celsius. Pasien hanya mengeluhkan batuk, flu, tapi tidak ada keluhan sesak napas,” ujar Achmad Yurianto dalam Sehat Negeriku!</p>\n        <p> balik ke belakang, kasus 1 dan kasus 2 dimulai pada 14 Februari. Keduanya pasien COVID-19 tersebut merupakan seorang ibu (kasus 2) dan putrinya (kasus 1). Kasus atau pasien 1 mengeluh batuk, demam, dan lemas pada tanggal 16 Februari. Selanjutnya, ibunya juga jatuh sakit dan mereka memutuskan untuk dirawat di rumah sakit pada tanggal 26 Februari.</p>\n        \n        <h6>Kasus 6 Bukan Cluster Jakarta </h6>\n        <p>Pada Minggu (8/3) WNI yang positif mengidap virus corona penyebab COVID-19 bertambah 2 orang. Sampai saat ini total WNI yang positif terjangkit virus korona menjadi 6 orang. Lalu, bagaimana dengan kasus 5 dan 6 pasien baru virus corona di Indonesia? </p>\n        <p>Kasus 5 berantai dengan kasus 1 sampai 4. Pasien pada kasus 5 ini (55) merupakan hasil tracking dari cluster Jakarta. Sementara ini kasus 6 lain lagi ceritanya. Pasien pada kasus 6 merupakan pria berusia 36 tahun anak buah kapal Diamond Princess. Sebelumnya terdapat sekitar 78 WNI yang menjadi ABK di kapal tersebut.</p>\n        <p>Achmad Yurianto mengatakan, kasus 6 merupakan imported case yang pasien dapat dari Jepang, ketika bekerja sebagai awak kapal Diamond Princess. </p>\n        <p>“Dua orang warga Indonesia terdeteksi positif virus corona berdasarkan pemeriksaan dan hasil data laboratorium (Balitbangkes Kementerian Kesehatan),” tegasnya  Yurianto pada Minggu (8/3) di komplek Istana Kepresidenan. </p>\n        <p>Saat ini pasien di kasus 1-5 dirawat di RSPI Sulianti Saroso. Sementara itu, kasus 6 dirawat di RS Persahabatan. </p>\n        \n        <h6>Kasus Baru di Singapura, WNI Positif Corona Bertambah</h6>\n        <p>Selain di Wilayah Indonesia, jumlah WNI di Singapura yang terjangkit virus corona juga bertambah. Menurut keterangan Ministry of Health (MOH) Singapura, pada Minggu malam (8/3), seorang WNI (64) dinyatakan positif terjangkit virus corona. Temuan ini menjadi kasus ke-147 di negara tersebut. </p>\n        <p>Bagaimana kronologinya? MOH mengatakan, WNI yang tiba di Singapura pada Sabtu (7/3) tersebut, merupakan kasus impor. Sayangnya, belum diinformasikan lebih jauh dari negara mana WNI tersebut terjangkit COVID-19. </p>\n        <p>Sementara itu, pada Sabtu (7/3), seorang WNI (62) juga dinyatakan positif terinfeksi virus corona. Kasus ke-133 di Singapura ini diduga berasal dari acara makanan malam yang diadakan Restoran Joy Garden, SAFRA Jurong Singapura, pada 15 Februari 2020. </p>\n        <p>Menurut pemerintah Singapura, SAFRA Jurong menjadi salah satu cluster penularan pasien dengan jumlah yang cukup besar. Menurut MOH, sekitar 30 orang dinyatakan positif mengidap COVID-19 dalam cluster tersebut. </p>\n        <p>Sedangkan kasus pertama merupakan WNI yang berprofesi sebagai asisten rumah tangga (ART). Perempuan berusia 44 tahun tersebut telah dinyatakan sembuh pada pertengan bulan lalu. </p>\n        <p>Yuk, pastikan sakitmu bukan karena virus corona! Andaikan dirimu mencurigai diri atau anggota keluarga mengidap infeksi virus corona, atau sulit membedakan gejala COVID-19 dengan flu, segeralah tanyakan pada dokter. </p>\n        \n      </div>\n  \n    </div>\n    <br>\n  </ion-content>";
+    __webpack_exports__["default"] = "<ion-header > \n  <ion-toolbar color=\"white\" class=\"headersss\">\n      <img src=\"/assets/logo.png\" alt=\"\" class=\"logo-image\">       \n      <ion-buttons slot=\"end\">\n        <ion-button color=\"dark\" (click)=\"closePage()\"> <ion-icon name=\"close\"></ion-icon>\n        </ion-button>\n      </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n  \n  <ion-content >\n    <div class=\"container\">\n      <!-- <table class=\"table-info\">\n        <tr class=\"pic\">\n          <td rowspan=\"3\" width=\"150px\">\n            <img src=\"/assets/doctors/1.png\" class=\"image-doctor\" alt=\"\" >\n          </td>\n        </tr>\n        <tr>\n          <td width=\"215px\" valign=\"top\">\n            <div style=\"max-width: 200px;\">\n              <h3>dr. Amelia Rifai, Sp.PD-KGEH</h3>\n              <span class=\"specialist\">Gastroenterologi-Hepatologi </span>\n            </div>\n            \n          </td>\n        </tr>\n        <tr>\n          <td>\n            <ion-chip color=\"success\">\n              <ion-icon class=\"contact\" name=\"mail-outline\"></ion-icon>\n            </ion-chip>\n            <ion-chip color=\"warning\">\n              <ion-icon class=\"contact\" name=\"call-outline\"></ion-icon>\n            </ion-chip>\n            <ion-chip color=\"secondary\">\n              <ion-icon class=\"contact\" name=\"videocam-outline\"></ion-icon>\n            </ion-chip>\n          </td>\n        </tr>\n      </table> -->\n      <div class=\"content-news\">\n        <h5>Kasusnya Bertambah, 6 WNI Positif Virus Corona di Indonesia</h5>\n        <p>Ditinjau oleh <span>dr. Rizal Fadli </span></p>\n        <p>09 Maret 2020</p>\n        <img src=\"/assets/news/news1.jpg\" class=\"picture-news\" alt=\"\" >\n        <p>Jakarta - Virus corona (korona) Wuhan yang memasuki wilayah Indonesia sejak Senin (2/3), kini perlahan terus bertambah. Awalnya kasus ini menjangkiti WNI yang berdomisili di Depok, Jawa Barat. Keduanya kini masih dalam perawatan isolasi di Rumah Sakit Penyakit Infeksi Sulianti Saroso, Jakarta. </p>\n        <p>Kedua kasus ini disebut sebagai kasus 1 dan 2. Namun, menurut keterangan dari Kementerian Kesehatan RI dalam rilis Sehat Negeriku!, pada Jumat (6/3) dan Minggu (8/3) jumlah kasus virus corona di Indonesia bertambah. </p>\n        <p>Dengan kata lain, saat ini terdapat 6 WNI di Indonesia yang positif mengidap virus corona penyebab COVID-19. Nah, berikut ulasan lengkapnya. </p>\n        \n        <h6>Cluster Jakarta, Hasil Tracking 80 Orang</h6>\n        <p>Achmad Yurianto selaku Juru Bicara Pemerintah Indonesia untuk COVID-19 mengonfirmasi, terdapat 2 pasien positif mengidap COVID-19. kedua kasus baru (kasus 3 dan 4) disampaikannya pada Jumat (6/3) di Istana Kepresidenan. </p>\n        <p>Penemuan kasus 3 dan 4 ini merupakan hasil tracking terhadap kasus 1. Dinas Kesehatan Provinsi DKI Jakarta bersama Kepolisian RI dan Badan Intelijen Negara (BIN), telah mengidentifikasi 80 orang yang berada dalam sebuah acara bersama pasien (kasus) 1 di Jakarta. Dalam acara ini, pasien 1 terjangkit virus corona dari warga negara Jepang yang tinggi di Malaysia. </p>\n        <p> 80 orang orang tersebut jumlahnya mengerucut jadi 20 orang. Dari situ pemerintah terus mendalami kasusnya, hingga membawa 7 orang ke RSPI Sulianti Saroso. Pemerintah melakukan serangkaian pemeriksaan dan isolasi pada ke 7 orang tersebut. Sebab mereka mengalami gejala-gejala infeksi virus corona, seperti influenza meski dalam kategori sedang.  </p>\n        <p>“Dari 7 orang ini kita dapatkan dua orang confirm positif yang kami sebut sebagai kasus no 3 dan kasus no 4, Saya dapat laporan terakhir siang ini kasus 3 dan kasus 4 suhu badannya 37,6 dan 37,7 derajat Celsius. Pasien hanya mengeluhkan batuk, flu, tapi tidak ada keluhan sesak napas,” ujar Achmad Yurianto dalam Sehat Negeriku!</p>\n        <p> balik ke belakang, kasus 1 dan kasus 2 dimulai pada 14 Februari. Keduanya pasien COVID-19 tersebut merupakan seorang ibu (kasus 2) dan putrinya (kasus 1). Kasus atau pasien 1 mengeluh batuk, demam, dan lemas pada tanggal 16 Februari. Selanjutnya, ibunya juga jatuh sakit dan mereka memutuskan untuk dirawat di rumah sakit pada tanggal 26 Februari.</p>\n        \n        <h6>Kasus 6 Bukan Cluster Jakarta </h6>\n        <p>Pada Minggu (8/3) WNI yang positif mengidap virus corona penyebab COVID-19 bertambah 2 orang. Sampai saat ini total WNI yang positif terjangkit virus korona menjadi 6 orang. Lalu, bagaimana dengan kasus 5 dan 6 pasien baru virus corona di Indonesia? </p>\n        <p>Kasus 5 berantai dengan kasus 1 sampai 4. Pasien pada kasus 5 ini (55) merupakan hasil tracking dari cluster Jakarta. Sementara ini kasus 6 lain lagi ceritanya. Pasien pada kasus 6 merupakan pria berusia 36 tahun anak buah kapal Diamond Princess. Sebelumnya terdapat sekitar 78 WNI yang menjadi ABK di kapal tersebut.</p>\n        <p>Achmad Yurianto mengatakan, kasus 6 merupakan imported case yang pasien dapat dari Jepang, ketika bekerja sebagai awak kapal Diamond Princess. </p>\n        <p>“Dua orang warga Indonesia terdeteksi positif virus corona berdasarkan pemeriksaan dan hasil data laboratorium (Balitbangkes Kementerian Kesehatan),” tegasnya  Yurianto pada Minggu (8/3) di komplek Istana Kepresidenan. </p>\n        <p>Saat ini pasien di kasus 1-5 dirawat di RSPI Sulianti Saroso. Sementara itu, kasus 6 dirawat di RS Persahabatan. </p>\n        \n        <h6>Kasus Baru di Singapura, WNI Positif Corona Bertambah</h6>\n        <p>Selain di Wilayah Indonesia, jumlah WNI di Singapura yang terjangkit virus corona juga bertambah. Menurut keterangan Ministry of Health (MOH) Singapura, pada Minggu malam (8/3), seorang WNI (64) dinyatakan positif terjangkit virus corona. Temuan ini menjadi kasus ke-147 di negara tersebut. </p>\n        <p>Bagaimana kronologinya? MOH mengatakan, WNI yang tiba di Singapura pada Sabtu (7/3) tersebut, merupakan kasus impor. Sayangnya, belum diinformasikan lebih jauh dari negara mana WNI tersebut terjangkit COVID-19. </p>\n        <p>Sementara itu, pada Sabtu (7/3), seorang WNI (62) juga dinyatakan positif terinfeksi virus corona. Kasus ke-133 di Singapura ini diduga berasal dari acara makanan malam yang diadakan Restoran Joy Garden, SAFRA Jurong Singapura, pada 15 Februari 2020. </p>\n        <p>Menurut pemerintah Singapura, SAFRA Jurong menjadi salah satu cluster penularan pasien dengan jumlah yang cukup besar. Menurut MOH, sekitar 30 orang dinyatakan positif mengidap COVID-19 dalam cluster tersebut. </p>\n        <p>Sedangkan kasus pertama merupakan WNI yang berprofesi sebagai asisten rumah tangga (ART). Perempuan berusia 44 tahun tersebut telah dinyatakan sembuh pada pertengan bulan lalu. </p>\n        <p>Yuk, pastikan sakitmu bukan karena virus corona! Andaikan dirimu mencurigai diri atau anggota keluarga mengidap infeksi virus corona, atau sulit membedakan gejala COVID-19 dengan flu, segeralah tanyakan pada dokter. </p>\n        \n      </div>\n  \n    </div>\n    <br>\n  </ion-content>";
     /***/
   },
 
@@ -379,9 +373,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       } instanceof Array && function (d, b) {
         d.__proto__ = b;
       } || function (d, b) {
-        for (var p in b) {
-          if (b.hasOwnProperty(p)) d[p] = b[p];
-        }
+        for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
       };
 
       return _extendStatics(d, b);
@@ -402,9 +394,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         for (var s, i = 1, n = arguments.length; i < n; i++) {
           s = arguments[i];
 
-          for (var p in s) {
-            if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-          }
+          for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
         }
 
         return t;
@@ -416,9 +406,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     function __rest(s, e) {
       var t = {};
 
-      for (var p in s) {
-        if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
-      }
+      for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
 
       if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
         if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
@@ -430,9 +418,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var c = arguments.length,
           r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
           d;
-      if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
-        if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-      }
+      if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
       return c > 3 && r && Object.defineProperty(target, key, r), r;
     }
 
@@ -509,76 +495,74 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
 
-        while (_) {
-          try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
+        while (_) try {
+          if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+          if (y = 0, t) op = [op[0] & 2, t.value];
 
-            switch (op[0]) {
-              case 0:
-              case 1:
+          switch (op[0]) {
+            case 0:
+            case 1:
+              t = op;
+              break;
+
+            case 4:
+              _.label++;
+              return {
+                value: op[1],
+                done: false
+              };
+
+            case 5:
+              _.label++;
+              y = op[1];
+              op = [0];
+              continue;
+
+            case 7:
+              op = _.ops.pop();
+
+              _.trys.pop();
+
+              continue;
+
+            default:
+              if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                _ = 0;
+                continue;
+              }
+
+              if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+                _.label = op[1];
+                break;
+              }
+
+              if (op[0] === 6 && _.label < t[1]) {
+                _.label = t[1];
                 t = op;
                 break;
+              }
 
-              case 4:
-                _.label++;
-                return {
-                  value: op[1],
-                  done: false
-                };
+              if (t && _.label < t[2]) {
+                _.label = t[2];
 
-              case 5:
-                _.label++;
-                y = op[1];
-                op = [0];
-                continue;
+                _.ops.push(op);
 
-              case 7:
-                op = _.ops.pop();
+                break;
+              }
 
-                _.trys.pop();
+              if (t[2]) _.ops.pop();
 
-                continue;
+              _.trys.pop();
 
-              default:
-                if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-                  _ = 0;
-                  continue;
-                }
-
-                if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
-                  _.label = op[1];
-                  break;
-                }
-
-                if (op[0] === 6 && _.label < t[1]) {
-                  _.label = t[1];
-                  t = op;
-                  break;
-                }
-
-                if (t && _.label < t[2]) {
-                  _.label = t[2];
-
-                  _.ops.push(op);
-
-                  break;
-                }
-
-                if (t[2]) _.ops.pop();
-
-                _.trys.pop();
-
-                continue;
-            }
-
-            op = body.call(thisArg, _);
-          } catch (e) {
-            op = [6, e];
-            y = 0;
-          } finally {
-            f = t = 0;
+              continue;
           }
+
+          op = body.call(thisArg, _);
+        } catch (e) {
+          op = [6, e];
+          y = 0;
+        } finally {
+          f = t = 0;
         }
 
         if (op[0] & 5) throw op[1];
@@ -590,9 +574,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     function __exportStar(m, exports) {
-      for (var p in m) {
-        if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-      }
+      for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
     }
 
     function __values(o) {
@@ -621,9 +603,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           e;
 
       try {
-        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) {
-          ar.push(r.value);
-        }
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
       } catch (error) {
         e = {
           error: error
@@ -640,23 +620,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     function __spread() {
-      for (var ar = [], i = 0; i < arguments.length; i++) {
-        ar = ar.concat(__read(arguments[i]));
-      }
+      for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
 
       return ar;
     }
 
     function __spreadArrays() {
-      for (var s = 0, i = 0, il = arguments.length; i < il; i++) {
-        s += arguments[i].length;
-      }
+      for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
 
-      for (var r = Array(s), k = 0, i = 0; i < il; i++) {
-        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++) {
-          r[k] = a[j];
-        }
-      }
+      for (var r = Array(s), k = 0, i = 0; i < il; i++) for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++) r[k] = a[j];
 
       return r;
     }
@@ -770,9 +742,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     function __importStar(mod) {
       if (mod && mod.__esModule) return mod;
       var result = {};
-      if (mod != null) for (var k in mod) {
-        if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
-      }
+      if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
       result.default = mod;
       return result;
     }
@@ -841,67 +811,43 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
 
-    var routes = [{
+    const routes = [{
       path: '',
-      loadChildren: function loadChildren() {
-        return __webpack_require__.e(
-        /*! import() | tabs-tabs-module */
-        "tabs-tabs-module").then(__webpack_require__.bind(null,
-        /*! ./tabs/tabs.module */
-        "./src/app/tabs/tabs.module.ts")).then(function (m) {
-          return m.TabsPageModule;
-        });
-      }
+      loadChildren: () => __webpack_require__.e(
+      /*! import() | tabs-tabs-module */
+      "tabs-tabs-module").then(__webpack_require__.bind(null,
+      /*! ./tabs/tabs.module */
+      "./src/app/tabs/tabs.module.ts")).then(m => m.TabsPageModule)
+    }, {
+      path: 'login',
+      loadChildren: () => __webpack_require__.e(
+      /*! import() | login-login-module */
+      "login-login-module").then(__webpack_require__.bind(null,
+      /*! ./login/login.module */
+      "./src/app/login/login.module.ts")).then(m => m.LoginPageModule)
+    }, {
+      path: 'register',
+      loadChildren: () => __webpack_require__.e(
+      /*! import() | register-register-module */
+      "register-register-module").then(__webpack_require__.bind(null,
+      /*! ./register/register.module */
+      "./src/app/register/register.module.ts")).then(m => m.RegisterPageModule)
     }, {
       path: 'detail',
-      loadChildren: function loadChildren() {
-        return __webpack_require__.e(
-        /*! import() | doctor-detail-detail-module */
-        "doctor-detail-detail-module").then(__webpack_require__.bind(null,
-        /*! ./doctor/detail/detail.module */
-        "./src/app/doctor/detail/detail.module.ts")).then(function (m) {
-          return m.DetailPageModule;
-        });
-      }
-    }, {
-      path: 'schedule',
-      loadChildren: function loadChildren() {
-        return __webpack_require__.e(
-        /*! import() | doctor-schedule-schedule-module */
-        "doctor-schedule-schedule-module").then(__webpack_require__.bind(null,
-        /*! ./doctor/schedule/schedule.module */
-        "./src/app/doctor/schedule/schedule.module.ts")).then(function (m) {
-          return m.SchedulePageModule;
-        });
-      }
-    }, {
-      path: 'dailypost',
-      loadChildren: function loadChildren() {
-        return __webpack_require__.e(
-        /*! import() | doctor-dailypost-dailypost-module */
-        "doctor-dailypost-dailypost-module").then(__webpack_require__.bind(null,
-        /*! ./doctor/dailypost/dailypost.module */
-        "./src/app/doctor/dailypost/dailypost.module.ts")).then(function (m) {
-          return m.DailypostPageModule;
-        });
-      }
+      loadChildren: () => __webpack_require__.e(
+      /*! import() | doctor-detail-detail-module */
+      "doctor-detail-detail-module").then(__webpack_require__.bind(null,
+      /*! ./doctor/detail/detail.module */
+      "./src/app/doctor/detail/detail.module.ts")).then(m => m.DetailPageModule)
     }, {
       path: 'news-detail',
-      loadChildren: function loadChildren() {
-        return __webpack_require__.e(
-        /*! import() | news-news-detail-news-detail-module */
-        "news-news-detail-news-detail-module").then(__webpack_require__.bind(null,
-        /*! ./news/news-detail/news-detail.module */
-        "./src/app/news/news-detail/news-detail.module.ts")).then(function (m) {
-          return m.NewsDetailPageModule;
-        });
-      }
+      loadChildren: () => __webpack_require__.e(
+      /*! import() | news-news-detail-news-detail-module */
+      "news-news-detail-news-detail-module").then(__webpack_require__.bind(null,
+      /*! ./news/news-detail/news-detail.module */
+      "./src/app/news/news-detail/news-detail.module.ts")).then(m => m.NewsDetailPageModule)
     }];
-
-    var AppRoutingModule = function AppRoutingModule() {
-      _classCallCheck(this, AppRoutingModule);
-    };
-
+    let AppRoutingModule = class AppRoutingModule {};
     AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
       imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes, {
         preloadingStrategy: _angular_router__WEBPACK_IMPORTED_MODULE_2__["PreloadAllModules"]
@@ -981,43 +927,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! @ionic-native/status-bar/ngx */
     "./node_modules/@ionic-native/status-bar/ngx/index.js");
 
-    var AppComponent = /*#__PURE__*/function () {
-      function AppComponent(platform, splashScreen, statusBar) {
-        _classCallCheck(this, AppComponent);
-
+    let AppComponent = class AppComponent {
+      constructor(platform, splashScreen, statusBar) {
         this.platform = platform;
         this.splashScreen = splashScreen;
         this.statusBar = statusBar;
         this.initializeApp();
       }
 
-      _createClass(AppComponent, [{
-        key: "initializeApp",
-        value: function initializeApp() {
-          var _this = this;
+      initializeApp() {
+        this.platform.ready().then(() => {
+          this.statusBar.styleDefault();
+          this.splashScreen.hide();
+          this.statusBar.backgroundColorByHexString("#ffffff");
+        });
+      }
 
-          this.platform.ready().then(function () {
-            _this.statusBar.styleDefault();
-
-            _this.splashScreen.hide();
-
-            _this.statusBar.backgroundColorByHexString("#E09D55");
-          });
-        }
-      }]);
-
-      return AppComponent;
-    }();
-
-    AppComponent.ctorParameters = function () {
-      return [{
-        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"]
-      }, {
-        type: _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__["SplashScreen"]
-      }, {
-        type: _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__["StatusBar"]
-      }];
     };
+
+    AppComponent.ctorParameters = () => [{
+      type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"]
+    }, {
+      type: _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__["SplashScreen"]
+    }, {
+      type: _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__["StatusBar"]
+    }];
 
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-root',
@@ -1117,10 +1051,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ./news/news-detail/news-detail.page */
     "./src/app/news/news-detail/news-detail.page.ts");
 
-    var AppModule = function AppModule() {
-      _classCallCheck(this, AppModule);
-    };
-
+    let AppModule = class AppModule {};
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
       declarations: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"], _doctor_detail_detail_page__WEBPACK_IMPORTED_MODULE_9__["DetailPage"], _news_news_detail_news_detail_page__WEBPACK_IMPORTED_MODULE_10__["NewsDetailPage"]],
       entryComponents: [_doctor_detail_detail_page__WEBPACK_IMPORTED_MODULE_9__["DetailPage"], _news_news_detail_news_detail_page__WEBPACK_IMPORTED_MODULE_10__["NewsDetailPage"]],
@@ -1150,7 +1081,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".detail {\n  padding: 20px !important; }\n\n.info-doctor {\n  padding: 15px;\n  height: 150px; }\n\nion-title {\n  position: static !important;\n  color: #332C2B; }\n\n.specialist {\n  font-size: 13px !important;\n  color: #696969; }\n\n.contact {\n  margin: 0px !important; }\n\n.image-doctor {\n  background-color: #F6BB7E;\n  border-radius: 20px !important;\n  padding: 10px;\n  width: 150px !important;\n  height: auto;\n  float: left;\n  vertical-align: middle; }\n\n.image-maps {\n  border-radius: 20px !important;\n  width: 120px !important;\n  height: 180px;\n  margin-right: 10px;\n  float: right;\n  vertical-align: middle; }\n\np {\n  padding: 0px 20px !important;\n  margin: 0px !important;\n  font-size: 13px;\n  color: #696969; }\n\n.info {\n  padding: 0px 5px !important;\n  margin: 0px !important;\n  font-size: 13px;\n  color: #696969; }\n\n.info-doctor h6 {\n  padding-left: 5px !important; }\n\n.address-doctor {\n  float: left;\n  max-width: 60%; }\n\n.table-info {\n  padding: 20px !important;\n  width: 100%;\n  border-collapse: unset; }\n\n.table-info tr > td {\n  padding-left: 10px; }\n\n.table-info tr.pic td {\n  padding: 0px; }\n\n.table-info h3 {\n  color: #332C2B;\n  margin-top: 0px;\n  margin-bottom: 0px; }\n\n.schedule {\n  margin-top: 50px;\n  padding: 20px;\n  padding-left: 35px !important;\n  padding-left: 15px !important; }\n\n.btn-schedule {\n  font-size: 12px;\n  width: 100%;\n  max-width: 100%;\n  text-transform: initial;\n  color: white !important; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9sYWI2MDEvRG9jdW1lbnRzL1VUU18wOV8zNF8zNi9PZG9jL3NyYy9hcHAvZG9jdG9yL2RldGFpbC9kZXRhaWwucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0csd0JBQXdCLEVBQUE7O0FBRzFCO0VBQ0UsYUFBYTtFQUNiLGFBQWEsRUFBQTs7QUFHZjtFQUNFLDJCQUEyQjtFQUMzQixjQUFjLEVBQUE7O0FBRWhCO0VBQ0UsMEJBQTBCO0VBQzFCLGNBQWMsRUFBQTs7QUFFaEI7RUFDQyxzQkFBc0IsRUFBQTs7QUFFdkI7RUFDRSx5QkFBeUI7RUFDekIsOEJBQThCO0VBQzlCLGFBQWE7RUFDYix1QkFBdUI7RUFDdkIsWUFBWTtFQUNaLFdBQVc7RUFDWCxzQkFBcUIsRUFBQTs7QUFHdkI7RUFFRSw4QkFBOEI7RUFFOUIsdUJBQXVCO0VBQ3ZCLGFBQWE7RUFDYixrQkFBa0I7RUFDbEIsWUFBWTtFQUNaLHNCQUFxQixFQUFBOztBQUd2QjtFQUNFLDRCQUE0QjtFQUM1QixzQkFBc0I7RUFDdEIsZUFBZTtFQUNmLGNBQWMsRUFBQTs7QUFFaEI7RUFDRSwyQkFBMkI7RUFDM0Isc0JBQXNCO0VBQ3RCLGVBQWU7RUFDZixjQUFjLEVBQUE7O0FBRWhCO0VBQ0UsNEJBQTRCLEVBQUE7O0FBRTlCO0VBQ0UsV0FBVztFQUNYLGNBQWMsRUFBQTs7QUFJaEI7RUFDRSx3QkFBd0I7RUFDeEIsV0FBVztFQUNYLHNCQUFzQixFQUFBOztBQUV4QjtFQUNFLGtCQUFrQixFQUFBOztBQUdwQjtFQUNFLFlBQVksRUFBQTs7QUFHZDtFQUNFLGNBQWM7RUFDZCxlQUFlO0VBQ2Ysa0JBQWtCLEVBQUE7O0FBSXBCO0VBQ0UsZ0JBQWdCO0VBQ2hCLGFBQWE7RUFDYiw2QkFBNkI7RUFDN0IsNkJBQTZCLEVBQUE7O0FBSS9CO0VBQ0UsZUFBZTtFQUNmLFdBQVc7RUFDWCxlQUFlO0VBQ2YsdUJBQXVCO0VBQ3ZCLHVCQUF1QixFQUFBIiwiZmlsZSI6InNyYy9hcHAvZG9jdG9yL2RldGFpbC9kZXRhaWwucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmRldGFpbHtcclxuICAgcGFkZGluZzogMjBweCAhaW1wb3J0YW50O1xyXG4gICAvLyBoZWlnaHQ6IDIwMHB4O1xyXG4gfVxyXG4gLmluZm8tZG9jdG9ye1xyXG4gICBwYWRkaW5nOiAxNXB4O1xyXG4gICBoZWlnaHQ6IDE1MHB4O1xyXG4gfVxyXG4gXHJcbiBpb24tdGl0bGUge1xyXG4gICBwb3NpdGlvbjogc3RhdGljICFpbXBvcnRhbnQ7XHJcbiAgIGNvbG9yOiAjMzMyQzJCO1xyXG4gfVxyXG4gLnNwZWNpYWxpc3R7XHJcbiAgIGZvbnQtc2l6ZTogMTNweCAhaW1wb3J0YW50O1xyXG4gICBjb2xvcjogIzY5Njk2OTtcclxuIH1cclxuIC5jb250YWN0e1xyXG4gIG1hcmdpbjogMHB4ICFpbXBvcnRhbnQ7XHJcbiB9XHJcbiAuaW1hZ2UtZG9jdG9ye1xyXG4gICBiYWNrZ3JvdW5kLWNvbG9yOiAjRjZCQjdFO1xyXG4gICBib3JkZXItcmFkaXVzOiAyMHB4ICFpbXBvcnRhbnQ7O1xyXG4gICBwYWRkaW5nOiAxMHB4O1xyXG4gICB3aWR0aDogMTUwcHggIWltcG9ydGFudDtcclxuICAgaGVpZ2h0OiBhdXRvO1xyXG4gICBmbG9hdDogbGVmdDtcclxuICAgdmVydGljYWwtYWxpZ246bWlkZGxlO1xyXG4gfVxyXG4gXHJcbiAuaW1hZ2UtbWFwc3tcclxuICAvLyAgYmFja2dyb3VuZC1jb2xvcjogI2RkZDtcclxuICAgYm9yZGVyLXJhZGl1czogMjBweCAhaW1wb3J0YW50OztcclxuICAvLyAgcGFkZGluZzogMTBweDtcclxuICAgd2lkdGg6IDEyMHB4ICFpbXBvcnRhbnQ7XHJcbiAgIGhlaWdodDogMTgwcHg7XHJcbiAgIG1hcmdpbi1yaWdodDogMTBweDtcclxuICAgZmxvYXQ6IHJpZ2h0O1xyXG4gICB2ZXJ0aWNhbC1hbGlnbjptaWRkbGU7XHJcbiB9XHJcbiBcclxuIHB7XHJcbiAgIHBhZGRpbmc6IDBweCAyMHB4ICFpbXBvcnRhbnQ7XHJcbiAgIG1hcmdpbjogMHB4ICFpbXBvcnRhbnQ7XHJcbiAgIGZvbnQtc2l6ZTogMTNweDtcclxuICAgY29sb3I6ICM2OTY5Njk7XHJcbiB9XHJcbiAuaW5mb3tcclxuICAgcGFkZGluZzogMHB4IDVweCAhaW1wb3J0YW50O1xyXG4gICBtYXJnaW46IDBweCAhaW1wb3J0YW50O1xyXG4gICBmb250LXNpemU6IDEzcHg7XHJcbiAgIGNvbG9yOiAjNjk2OTY5O1xyXG4gfVxyXG4gLmluZm8tZG9jdG9yIGg2e1xyXG4gICBwYWRkaW5nLWxlZnQ6IDVweCAhaW1wb3J0YW50O1xyXG4gfVxyXG4gLmFkZHJlc3MtZG9jdG9ye1xyXG4gICBmbG9hdDogbGVmdDtcclxuICAgbWF4LXdpZHRoOiA2MCU7XHJcbiBcclxuIH1cclxuIFxyXG4gLnRhYmxlLWluZm97XHJcbiAgIHBhZGRpbmc6IDIwcHggIWltcG9ydGFudDtcclxuICAgd2lkdGg6IDEwMCU7XHJcbiAgIGJvcmRlci1jb2xsYXBzZTogdW5zZXQ7XHJcbiB9XHJcbiAudGFibGUtaW5mbyB0ciA+IHRke1xyXG4gICBwYWRkaW5nLWxlZnQ6IDEwcHg7XHJcbiB9XHJcbiBcclxuIC50YWJsZS1pbmZvIHRyLnBpYyB0ZHtcclxuICAgcGFkZGluZzogMHB4O1xyXG4gfVxyXG4gXHJcbiAudGFibGUtaW5mbyBoM3tcclxuICAgY29sb3I6ICMzMzJDMkI7XHJcbiAgIG1hcmdpbi10b3A6IDBweDtcclxuICAgbWFyZ2luLWJvdHRvbTogMHB4O1xyXG4gXHJcbiB9XHJcbiBcclxuIC5zY2hlZHVsZXtcclxuICAgbWFyZ2luLXRvcDogNTBweDtcclxuICAgcGFkZGluZzogMjBweDtcclxuICAgcGFkZGluZy1sZWZ0OiAzNXB4ICFpbXBvcnRhbnQ7XHJcbiAgIHBhZGRpbmctbGVmdDogMTVweCAhaW1wb3J0YW50O1xyXG5cclxuIH1cclxuIFxyXG4gLmJ0bi1zY2hlZHVsZXtcclxuICAgZm9udC1zaXplOiAxMnB4O1xyXG4gICB3aWR0aDogMTAwJTtcclxuICAgbWF4LXdpZHRoOiAxMDAlO1xyXG4gICB0ZXh0LXRyYW5zZm9ybTogaW5pdGlhbDtcclxuICAgY29sb3I6IHdoaXRlICFpbXBvcnRhbnQ7XHJcbiB9Il19 */";
+    __webpack_exports__["default"] = ".detail {\n  padding: 20px !important;\n}\n\n.info-doctor {\n  padding: 15px;\n  height: 150px;\n}\n\nion-title {\n  position: static !important;\n  color: #332C2B;\n}\n\n.specialist {\n  font-size: 13px !important;\n  color: #696969;\n}\n\n.contact {\n  margin: 0px !important;\n}\n\n.image-doctor {\n  background-color: #F6BB7E;\n  border-radius: 20px !important;\n  padding: 10px;\n  width: 150px !important;\n  height: auto;\n  float: left;\n  vertical-align: middle;\n}\n\n.image-maps {\n  border-radius: 20px !important;\n  width: 120px !important;\n  height: 180px;\n  margin-right: 10px;\n  float: right;\n  vertical-align: middle;\n}\n\np {\n  padding: 0px 20px !important;\n  margin: 0px !important;\n  font-size: 13px;\n  color: #696969;\n}\n\n.info {\n  padding: 0px 5px !important;\n  margin: 0px !important;\n  font-size: 13px;\n  color: #696969;\n}\n\n.info-doctor h6 {\n  padding-left: 5px !important;\n}\n\n.address-doctor {\n  float: left;\n  max-width: 60%;\n}\n\n.table-info {\n  padding: 20px !important;\n  width: 100%;\n  border-collapse: unset;\n}\n\n.table-info tr > td {\n  padding-left: 10px;\n}\n\n.table-info tr.pic td {\n  padding: 0px;\n}\n\n.table-info h3 {\n  color: #332C2B;\n  margin-top: 0px;\n  margin-bottom: 0px;\n}\n\n.schedule {\n  margin-top: 50px;\n  padding: 20px;\n  padding-left: 35px !important;\n  padding-left: 15px !important;\n}\n\n.btn-schedule {\n  font-size: 12px;\n  width: 100%;\n  max-width: 100%;\n  text-transform: initial;\n  color: white !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZG9jdG9yL2RldGFpbC9DOlxcVXNlcnNcXGZlcnJ5XFxEb2N1bWVudHNcXElvbmljIFByb2plY3RcXE9kb2Mvc3JjXFxhcHBcXGRvY3RvclxcZGV0YWlsXFxkZXRhaWwucGFnZS5zY3NzIiwic3JjL2FwcC9kb2N0b3IvZGV0YWlsL2RldGFpbC5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRyx3QkFBQTtBQ0NIOztBREVDO0VBQ0UsYUFBQTtFQUNBLGFBQUE7QUNDSDs7QURFQztFQUNFLDJCQUFBO0VBQ0EsY0FBQTtBQ0NIOztBRENDO0VBQ0UsMEJBQUE7RUFDQSxjQUFBO0FDRUg7O0FEQUM7RUFDQyxzQkFBQTtBQ0dGOztBRERDO0VBQ0UseUJBQUE7RUFDQSw4QkFBQTtFQUNBLGFBQUE7RUFDQSx1QkFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0VBQ0Esc0JBQUE7QUNJSDs7QUREQztFQUVFLDhCQUFBO0VBRUEsdUJBQUE7RUFDQSxhQUFBO0VBQ0Esa0JBQUE7RUFDQSxZQUFBO0VBQ0Esc0JBQUE7QUNFSDs7QURDQztFQUNFLDRCQUFBO0VBQ0Esc0JBQUE7RUFDQSxlQUFBO0VBQ0EsY0FBQTtBQ0VIOztBREFDO0VBQ0UsMkJBQUE7RUFDQSxzQkFBQTtFQUNBLGVBQUE7RUFDQSxjQUFBO0FDR0g7O0FEREM7RUFDRSw0QkFBQTtBQ0lIOztBREZDO0VBQ0UsV0FBQTtFQUNBLGNBQUE7QUNLSDs7QUREQztFQUNFLHdCQUFBO0VBQ0EsV0FBQTtFQUNBLHNCQUFBO0FDSUg7O0FERkM7RUFDRSxrQkFBQTtBQ0tIOztBREZDO0VBQ0UsWUFBQTtBQ0tIOztBREZDO0VBQ0UsY0FBQTtFQUNBLGVBQUE7RUFDQSxrQkFBQTtBQ0tIOztBRERDO0VBQ0UsZ0JBQUE7RUFDQSxhQUFBO0VBQ0EsNkJBQUE7RUFDQSw2QkFBQTtBQ0lIOztBREFDO0VBQ0UsZUFBQTtFQUNBLFdBQUE7RUFDQSxlQUFBO0VBQ0EsdUJBQUE7RUFDQSx1QkFBQTtBQ0dIIiwiZmlsZSI6InNyYy9hcHAvZG9jdG9yL2RldGFpbC9kZXRhaWwucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmRldGFpbHtcclxuICAgcGFkZGluZzogMjBweCAhaW1wb3J0YW50O1xyXG4gICAvLyBoZWlnaHQ6IDIwMHB4O1xyXG4gfVxyXG4gLmluZm8tZG9jdG9ye1xyXG4gICBwYWRkaW5nOiAxNXB4O1xyXG4gICBoZWlnaHQ6IDE1MHB4O1xyXG4gfVxyXG4gXHJcbiBpb24tdGl0bGUge1xyXG4gICBwb3NpdGlvbjogc3RhdGljICFpbXBvcnRhbnQ7XHJcbiAgIGNvbG9yOiAjMzMyQzJCO1xyXG4gfVxyXG4gLnNwZWNpYWxpc3R7XHJcbiAgIGZvbnQtc2l6ZTogMTNweCAhaW1wb3J0YW50O1xyXG4gICBjb2xvcjogIzY5Njk2OTtcclxuIH1cclxuIC5jb250YWN0e1xyXG4gIG1hcmdpbjogMHB4ICFpbXBvcnRhbnQ7XHJcbiB9XHJcbiAuaW1hZ2UtZG9jdG9ye1xyXG4gICBiYWNrZ3JvdW5kLWNvbG9yOiAjRjZCQjdFO1xyXG4gICBib3JkZXItcmFkaXVzOiAyMHB4ICFpbXBvcnRhbnQ7O1xyXG4gICBwYWRkaW5nOiAxMHB4O1xyXG4gICB3aWR0aDogMTUwcHggIWltcG9ydGFudDtcclxuICAgaGVpZ2h0OiBhdXRvO1xyXG4gICBmbG9hdDogbGVmdDtcclxuICAgdmVydGljYWwtYWxpZ246bWlkZGxlO1xyXG4gfVxyXG4gXHJcbiAuaW1hZ2UtbWFwc3tcclxuICAvLyAgYmFja2dyb3VuZC1jb2xvcjogI2RkZDtcclxuICAgYm9yZGVyLXJhZGl1czogMjBweCAhaW1wb3J0YW50OztcclxuICAvLyAgcGFkZGluZzogMTBweDtcclxuICAgd2lkdGg6IDEyMHB4ICFpbXBvcnRhbnQ7XHJcbiAgIGhlaWdodDogMTgwcHg7XHJcbiAgIG1hcmdpbi1yaWdodDogMTBweDtcclxuICAgZmxvYXQ6IHJpZ2h0O1xyXG4gICB2ZXJ0aWNhbC1hbGlnbjptaWRkbGU7XHJcbiB9XHJcbiBcclxuIHB7XHJcbiAgIHBhZGRpbmc6IDBweCAyMHB4ICFpbXBvcnRhbnQ7XHJcbiAgIG1hcmdpbjogMHB4ICFpbXBvcnRhbnQ7XHJcbiAgIGZvbnQtc2l6ZTogMTNweDtcclxuICAgY29sb3I6ICM2OTY5Njk7XHJcbiB9XHJcbiAuaW5mb3tcclxuICAgcGFkZGluZzogMHB4IDVweCAhaW1wb3J0YW50O1xyXG4gICBtYXJnaW46IDBweCAhaW1wb3J0YW50O1xyXG4gICBmb250LXNpemU6IDEzcHg7XHJcbiAgIGNvbG9yOiAjNjk2OTY5O1xyXG4gfVxyXG4gLmluZm8tZG9jdG9yIGg2e1xyXG4gICBwYWRkaW5nLWxlZnQ6IDVweCAhaW1wb3J0YW50O1xyXG4gfVxyXG4gLmFkZHJlc3MtZG9jdG9ye1xyXG4gICBmbG9hdDogbGVmdDtcclxuICAgbWF4LXdpZHRoOiA2MCU7XHJcbiBcclxuIH1cclxuIFxyXG4gLnRhYmxlLWluZm97XHJcbiAgIHBhZGRpbmc6IDIwcHggIWltcG9ydGFudDtcclxuICAgd2lkdGg6IDEwMCU7XHJcbiAgIGJvcmRlci1jb2xsYXBzZTogdW5zZXQ7XHJcbiB9XHJcbiAudGFibGUtaW5mbyB0ciA+IHRke1xyXG4gICBwYWRkaW5nLWxlZnQ6IDEwcHg7XHJcbiB9XHJcbiBcclxuIC50YWJsZS1pbmZvIHRyLnBpYyB0ZHtcclxuICAgcGFkZGluZzogMHB4O1xyXG4gfVxyXG4gXHJcbiAudGFibGUtaW5mbyBoM3tcclxuICAgY29sb3I6ICMzMzJDMkI7XHJcbiAgIG1hcmdpbi10b3A6IDBweDtcclxuICAgbWFyZ2luLWJvdHRvbTogMHB4O1xyXG4gXHJcbiB9XHJcbiBcclxuIC5zY2hlZHVsZXtcclxuICAgbWFyZ2luLXRvcDogNTBweDtcclxuICAgcGFkZGluZzogMjBweDtcclxuICAgcGFkZGluZy1sZWZ0OiAzNXB4ICFpbXBvcnRhbnQ7XHJcbiAgIHBhZGRpbmctbGVmdDogMTVweCAhaW1wb3J0YW50O1xyXG5cclxuIH1cclxuIFxyXG4gLmJ0bi1zY2hlZHVsZXtcclxuICAgZm9udC1zaXplOiAxMnB4O1xyXG4gICB3aWR0aDogMTAwJTtcclxuICAgbWF4LXdpZHRoOiAxMDAlO1xyXG4gICB0ZXh0LXRyYW5zZm9ybTogaW5pdGlhbDtcclxuICAgY29sb3I6IHdoaXRlICFpbXBvcnRhbnQ7XHJcbiB9IiwiLmRldGFpbCB7XG4gIHBhZGRpbmc6IDIwcHggIWltcG9ydGFudDtcbn1cblxuLmluZm8tZG9jdG9yIHtcbiAgcGFkZGluZzogMTVweDtcbiAgaGVpZ2h0OiAxNTBweDtcbn1cblxuaW9uLXRpdGxlIHtcbiAgcG9zaXRpb246IHN0YXRpYyAhaW1wb3J0YW50O1xuICBjb2xvcjogIzMzMkMyQjtcbn1cblxuLnNwZWNpYWxpc3Qge1xuICBmb250LXNpemU6IDEzcHggIWltcG9ydGFudDtcbiAgY29sb3I6ICM2OTY5Njk7XG59XG5cbi5jb250YWN0IHtcbiAgbWFyZ2luOiAwcHggIWltcG9ydGFudDtcbn1cblxuLmltYWdlLWRvY3RvciB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNGNkJCN0U7XG4gIGJvcmRlci1yYWRpdXM6IDIwcHggIWltcG9ydGFudDtcbiAgcGFkZGluZzogMTBweDtcbiAgd2lkdGg6IDE1MHB4ICFpbXBvcnRhbnQ7XG4gIGhlaWdodDogYXV0bztcbiAgZmxvYXQ6IGxlZnQ7XG4gIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XG59XG5cbi5pbWFnZS1tYXBzIHtcbiAgYm9yZGVyLXJhZGl1czogMjBweCAhaW1wb3J0YW50O1xuICB3aWR0aDogMTIwcHggIWltcG9ydGFudDtcbiAgaGVpZ2h0OiAxODBweDtcbiAgbWFyZ2luLXJpZ2h0OiAxMHB4O1xuICBmbG9hdDogcmlnaHQ7XG4gIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XG59XG5cbnAge1xuICBwYWRkaW5nOiAwcHggMjBweCAhaW1wb3J0YW50O1xuICBtYXJnaW46IDBweCAhaW1wb3J0YW50O1xuICBmb250LXNpemU6IDEzcHg7XG4gIGNvbG9yOiAjNjk2OTY5O1xufVxuXG4uaW5mbyB7XG4gIHBhZGRpbmc6IDBweCA1cHggIWltcG9ydGFudDtcbiAgbWFyZ2luOiAwcHggIWltcG9ydGFudDtcbiAgZm9udC1zaXplOiAxM3B4O1xuICBjb2xvcjogIzY5Njk2OTtcbn1cblxuLmluZm8tZG9jdG9yIGg2IHtcbiAgcGFkZGluZy1sZWZ0OiA1cHggIWltcG9ydGFudDtcbn1cblxuLmFkZHJlc3MtZG9jdG9yIHtcbiAgZmxvYXQ6IGxlZnQ7XG4gIG1heC13aWR0aDogNjAlO1xufVxuXG4udGFibGUtaW5mbyB7XG4gIHBhZGRpbmc6IDIwcHggIWltcG9ydGFudDtcbiAgd2lkdGg6IDEwMCU7XG4gIGJvcmRlci1jb2xsYXBzZTogdW5zZXQ7XG59XG5cbi50YWJsZS1pbmZvIHRyID4gdGQge1xuICBwYWRkaW5nLWxlZnQ6IDEwcHg7XG59XG5cbi50YWJsZS1pbmZvIHRyLnBpYyB0ZCB7XG4gIHBhZGRpbmc6IDBweDtcbn1cblxuLnRhYmxlLWluZm8gaDMge1xuICBjb2xvcjogIzMzMkMyQjtcbiAgbWFyZ2luLXRvcDogMHB4O1xuICBtYXJnaW4tYm90dG9tOiAwcHg7XG59XG5cbi5zY2hlZHVsZSB7XG4gIG1hcmdpbi10b3A6IDUwcHg7XG4gIHBhZGRpbmc6IDIwcHg7XG4gIHBhZGRpbmctbGVmdDogMzVweCAhaW1wb3J0YW50O1xuICBwYWRkaW5nLWxlZnQ6IDE1cHggIWltcG9ydGFudDtcbn1cblxuLmJ0bi1zY2hlZHVsZSB7XG4gIGZvbnQtc2l6ZTogMTJweDtcbiAgd2lkdGg6IDEwMCU7XG4gIG1heC13aWR0aDogMTAwJTtcbiAgdGV4dC10cmFuc2Zvcm06IGluaXRpYWw7XG4gIGNvbG9yOiB3aGl0ZSAhaW1wb3J0YW50O1xufSJdfQ== */";
     /***/
   },
 
@@ -1192,31 +1123,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! @ionic/angular */
     "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
 
-    var DetailPage = /*#__PURE__*/function () {
-      function DetailPage(modalCtrl) {
-        _classCallCheck(this, DetailPage);
-
+    let DetailPage = class DetailPage {
+      constructor(modalCtrl) {
         this.modalCtrl = modalCtrl;
+        this.textBtn = 'View List Of Schedule';
       }
 
-      _createClass(DetailPage, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {}
-      }, {
-        key: "closePage",
-        value: function closePage() {
-          this.modalCtrl.dismiss();
+      ngOnInit() {}
+
+      closePage() {
+        this.modalCtrl.dismiss();
+      }
+
+      schedule() {
+        if (this.opt == true) {
+          this.textBtn = 'View List Of Schedule';
+          this.opt = false;
+        } else {
+          this.textBtn = 'Close List Of Schedule';
+          this.opt = true;
         }
-      }]);
+      }
 
-      return DetailPage;
-    }();
-
-    DetailPage.ctorParameters = function () {
-      return [{
-        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"]
-      }];
     };
+
+    DetailPage.ctorParameters = () => [{
+      type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"]
+    }];
 
     DetailPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-detail',
@@ -1246,7 +1179,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".detail {\n  padding: 20px !important; }\n\n.info-doctor {\n  padding: 15px;\n  height: 150px; }\n\nion-title {\n  position: static !important;\n  color: #332C2B; }\n\n.specialist {\n  font-size: 13px !important;\n  color: #696969; }\n\n.contact {\n  margin: 0px !important; }\n\n.image-doctor {\n  background-color: #F6BB7E;\n  border-radius: 20px !important;\n  padding: 10px;\n  width: 150px !important;\n  height: auto;\n  float: left;\n  vertical-align: middle; }\n\n.image-maps {\n  background-color: #ddd;\n  border-radius: 20px !important;\n  padding: 10px;\n  width: 120px !important;\n  height: 180px;\n  margin-right: 10px;\n  float: right;\n  vertical-align: middle; }\n\np {\n  padding: 0px 20px !important;\n  margin: 0px !important;\n  font-size: 13px;\n  color: #696969;\n  text-align: justify;\n  text-justify: inter-word;\n  padding-bottom: 10px !important; }\n\n.info {\n  padding: 0px 5px !important;\n  margin: 0px !important;\n  font-size: 13px;\n  color: #696969; }\n\n.info-doctor h6 {\n  padding-left: 5px !important; }\n\n.address-doctor {\n  float: left;\n  max-width: 60%; }\n\n.table-info {\n  padding: 20px !important;\n  width: 100%;\n  border-collapse: unset; }\n\n.table-info tr > td {\n  padding-left: 10px; }\n\n.table-info tr.pic td {\n  padding: 0px; }\n\n.table-info h3 {\n  color: #332C2B;\n  margin-top: 0px;\n  margin-bottom: 0px; }\n\n.schedule {\n  margin-top: 50px;\n  padding: 20px;\n  padding-left: 35px !important; }\n\n.btn-schedule {\n  font-size: 12px;\n  width: 45%;\n  max-width: 100%;\n  text-transform: initial;\n  color: white !important; }\n\n.picture-news {\n  width: 100%;\n  height: 70%;\n  padding: 10px;\n  border-radius: 10px; }\n\nh6 {\n  padding-right: 20px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9sYWI2MDEvRG9jdW1lbnRzL1VUU18wOV8zNF8zNi9PZG9jL3NyYy9hcHAvbmV3cy9uZXdzLWRldGFpbC9uZXdzLWRldGFpbC5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSx3QkFBd0IsRUFBQTs7QUFHMUI7RUFDRSxhQUFhO0VBQ2IsYUFBYSxFQUFBOztBQUdmO0VBQ0UsMkJBQTJCO0VBQzNCLGNBQWMsRUFBQTs7QUFFaEI7RUFDRSwwQkFBMEI7RUFDMUIsY0FBYyxFQUFBOztBQUVoQjtFQUNDLHNCQUFzQixFQUFBOztBQUV2QjtFQUNFLHlCQUF5QjtFQUN6Qiw4QkFBOEI7RUFDOUIsYUFBYTtFQUNiLHVCQUF1QjtFQUN2QixZQUFZO0VBQ1osV0FBVztFQUNYLHNCQUFxQixFQUFBOztBQUd2QjtFQUNFLHNCQUFzQjtFQUN0Qiw4QkFBOEI7RUFDOUIsYUFBYTtFQUNiLHVCQUF1QjtFQUN2QixhQUFhO0VBQ2Isa0JBQWtCO0VBQ2xCLFlBQVk7RUFDWixzQkFBcUIsRUFBQTs7QUFHdkI7RUFDRSw0QkFBNEI7RUFDNUIsc0JBQXNCO0VBQ3RCLGVBQWU7RUFDZixjQUFjO0VBQ2QsbUJBQW1CO0VBQ25CLHdCQUF3QjtFQUN4QiwrQkFBK0IsRUFBQTs7QUFFakM7RUFDRSwyQkFBMkI7RUFDM0Isc0JBQXNCO0VBQ3RCLGVBQWU7RUFDZixjQUFjLEVBQUE7O0FBRWhCO0VBQ0UsNEJBQTRCLEVBQUE7O0FBRTlCO0VBQ0UsV0FBVztFQUNYLGNBQWMsRUFBQTs7QUFJaEI7RUFDRSx3QkFBd0I7RUFDeEIsV0FBVztFQUNYLHNCQUFzQixFQUFBOztBQUV4QjtFQUNFLGtCQUFrQixFQUFBOztBQUdwQjtFQUNFLFlBQVksRUFBQTs7QUFHZDtFQUNFLGNBQWM7RUFDZCxlQUFlO0VBQ2Ysa0JBQWtCLEVBQUE7O0FBSXBCO0VBQ0UsZ0JBQWdCO0VBQ2hCLGFBQWE7RUFDYiw2QkFBNkIsRUFBQTs7QUFHL0I7RUFDRSxlQUFlO0VBQ2YsVUFBVTtFQUNWLGVBQWU7RUFDZix1QkFBdUI7RUFDdkIsdUJBQXVCLEVBQUE7O0FBR3pCO0VBQ0UsV0FBVztFQUNYLFdBQVk7RUFFWixhQUFhO0VBQ2IsbUJBQW1CLEVBQUE7O0FBRXJCO0VBQ0ksbUJBQW1CLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9uZXdzL25ld3MtZGV0YWlsL25ld3MtZGV0YWlsLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5kZXRhaWx7XG4gICAgcGFkZGluZzogMjBweCAhaW1wb3J0YW50O1xuICAgIC8vIGhlaWdodDogMjAwcHg7XG4gIH1cbiAgLmluZm8tZG9jdG9ye1xuICAgIHBhZGRpbmc6IDE1cHg7XG4gICAgaGVpZ2h0OiAxNTBweDtcbiAgfVxuICBcbiAgaW9uLXRpdGxlIHtcbiAgICBwb3NpdGlvbjogc3RhdGljICFpbXBvcnRhbnQ7XG4gICAgY29sb3I6ICMzMzJDMkI7XG4gIH1cbiAgLnNwZWNpYWxpc3R7XG4gICAgZm9udC1zaXplOiAxM3B4ICFpbXBvcnRhbnQ7XG4gICAgY29sb3I6ICM2OTY5Njk7XG4gIH1cbiAgLmNvbnRhY3R7XG4gICBtYXJnaW46IDBweCAhaW1wb3J0YW50O1xuICB9XG4gIC5pbWFnZS1kb2N0b3J7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI0Y2QkI3RTtcbiAgICBib3JkZXItcmFkaXVzOiAyMHB4ICFpbXBvcnRhbnQ7O1xuICAgIHBhZGRpbmc6IDEwcHg7XG4gICAgd2lkdGg6IDE1MHB4ICFpbXBvcnRhbnQ7XG4gICAgaGVpZ2h0OiBhdXRvO1xuICAgIGZsb2F0OiBsZWZ0O1xuICAgIHZlcnRpY2FsLWFsaWduOm1pZGRsZTtcbiAgfVxuICBcbiAgLmltYWdlLW1hcHN7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2RkZDtcbiAgICBib3JkZXItcmFkaXVzOiAyMHB4ICFpbXBvcnRhbnQ7O1xuICAgIHBhZGRpbmc6IDEwcHg7XG4gICAgd2lkdGg6IDEyMHB4ICFpbXBvcnRhbnQ7XG4gICAgaGVpZ2h0OiAxODBweDtcbiAgICBtYXJnaW4tcmlnaHQ6IDEwcHg7XG4gICAgZmxvYXQ6IHJpZ2h0O1xuICAgIHZlcnRpY2FsLWFsaWduOm1pZGRsZTtcbiAgfVxuICBcbiAgcHtcbiAgICBwYWRkaW5nOiAwcHggMjBweCAhaW1wb3J0YW50O1xuICAgIG1hcmdpbjogMHB4ICFpbXBvcnRhbnQ7XG4gICAgZm9udC1zaXplOiAxM3B4O1xuICAgIGNvbG9yOiAjNjk2OTY5O1xuICAgIHRleHQtYWxpZ246IGp1c3RpZnk7XG4gICAgdGV4dC1qdXN0aWZ5OiBpbnRlci13b3JkO1xuICAgIHBhZGRpbmctYm90dG9tOiAxMHB4ICFpbXBvcnRhbnQ7XG4gIH1cbiAgLmluZm97XG4gICAgcGFkZGluZzogMHB4IDVweCAhaW1wb3J0YW50O1xuICAgIG1hcmdpbjogMHB4ICFpbXBvcnRhbnQ7XG4gICAgZm9udC1zaXplOiAxM3B4O1xuICAgIGNvbG9yOiAjNjk2OTY5O1xuICB9XG4gIC5pbmZvLWRvY3RvciBoNntcbiAgICBwYWRkaW5nLWxlZnQ6IDVweCAhaW1wb3J0YW50O1xuICB9XG4gIC5hZGRyZXNzLWRvY3RvcntcbiAgICBmbG9hdDogbGVmdDtcbiAgICBtYXgtd2lkdGg6IDYwJTtcbiAgXG4gIH1cbiAgXG4gIC50YWJsZS1pbmZve1xuICAgIHBhZGRpbmc6IDIwcHggIWltcG9ydGFudDtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBib3JkZXItY29sbGFwc2U6IHVuc2V0O1xuICB9XG4gIC50YWJsZS1pbmZvIHRyID4gdGR7XG4gICAgcGFkZGluZy1sZWZ0OiAxMHB4O1xuICB9XG4gIFxuICAudGFibGUtaW5mbyB0ci5waWMgdGR7XG4gICAgcGFkZGluZzogMHB4O1xuICB9XG4gIFxuICAudGFibGUtaW5mbyBoM3tcbiAgICBjb2xvcjogIzMzMkMyQjtcbiAgICBtYXJnaW4tdG9wOiAwcHg7XG4gICAgbWFyZ2luLWJvdHRvbTogMHB4O1xuICBcbiAgfVxuICBcbiAgLnNjaGVkdWxle1xuICAgIG1hcmdpbi10b3A6IDUwcHg7XG4gICAgcGFkZGluZzogMjBweDtcbiAgICBwYWRkaW5nLWxlZnQ6IDM1cHggIWltcG9ydGFudDtcbiAgfVxuICBcbiAgLmJ0bi1zY2hlZHVsZXtcbiAgICBmb250LXNpemU6IDEycHg7XG4gICAgd2lkdGg6IDQ1JTtcbiAgICBtYXgtd2lkdGg6IDEwMCU7XG4gICAgdGV4dC10cmFuc2Zvcm06IGluaXRpYWw7XG4gICAgY29sb3I6IHdoaXRlICFpbXBvcnRhbnQ7XG4gIH1cblxuICAucGljdHVyZS1uZXdze1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGhlaWdodDogNzAlIDsgXG4gICAgLy9iYWNrZ3JvdW5kOiAjRjZCQjdFO1xuICAgIHBhZGRpbmc6IDEwcHg7XG4gICAgYm9yZGVyLXJhZGl1czogMTBweDtcbiAgfVxuICBoNntcbiAgICAgIHBhZGRpbmctcmlnaHQ6IDIwcHg7XG4gIH0iXX0= */";
+    __webpack_exports__["default"] = ".detail {\n  padding: 20px !important;\n}\n\n.info-doctor {\n  padding: 15px;\n  height: 150px;\n}\n\nion-title {\n  position: static !important;\n  color: #332C2B;\n}\n\n.specialist {\n  font-size: 13px !important;\n  color: #696969;\n}\n\n.contact {\n  margin: 0px !important;\n}\n\n.image-doctor {\n  background-color: #F6BB7E;\n  border-radius: 20px !important;\n  padding: 10px;\n  width: 150px !important;\n  height: auto;\n  float: left;\n  vertical-align: middle;\n}\n\n.image-maps {\n  background-color: #ddd;\n  border-radius: 20px !important;\n  padding: 10px;\n  width: 120px !important;\n  height: 180px;\n  margin-right: 10px;\n  float: right;\n  vertical-align: middle;\n}\n\np {\n  padding: 0px 20px !important;\n  margin: 0px !important;\n  font-size: 13px;\n  color: #696969;\n  text-align: justify;\n  text-justify: inter-word;\n  padding-bottom: 10px !important;\n}\n\n.info {\n  padding: 0px 5px !important;\n  margin: 0px !important;\n  font-size: 13px;\n  color: #696969;\n}\n\n.info-doctor h6 {\n  padding-left: 5px !important;\n}\n\n.address-doctor {\n  float: left;\n  max-width: 60%;\n}\n\n.table-info {\n  padding: 20px !important;\n  width: 100%;\n  border-collapse: unset;\n}\n\n.table-info tr > td {\n  padding-left: 10px;\n}\n\n.table-info tr.pic td {\n  padding: 0px;\n}\n\n.table-info h3 {\n  color: #332C2B;\n  margin-top: 0px;\n  margin-bottom: 0px;\n}\n\n.schedule {\n  margin-top: 50px;\n  padding: 20px;\n  padding-left: 35px !important;\n}\n\n.btn-schedule {\n  font-size: 12px;\n  width: 45%;\n  max-width: 100%;\n  text-transform: initial;\n  color: white !important;\n}\n\n.picture-news {\n  width: 100%;\n  height: 70%;\n  padding: 10px;\n  border-radius: 10px;\n}\n\nh6 {\n  padding-right: 20px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbmV3cy9uZXdzLWRldGFpbC9DOlxcVXNlcnNcXGZlcnJ5XFxEb2N1bWVudHNcXElvbmljIFByb2plY3RcXE9kb2Mvc3JjXFxhcHBcXG5ld3NcXG5ld3MtZGV0YWlsXFxuZXdzLWRldGFpbC5wYWdlLnNjc3MiLCJzcmMvYXBwL25ld3MvbmV3cy1kZXRhaWwvbmV3cy1kZXRhaWwucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksd0JBQUE7QUNDSjs7QURFRTtFQUNFLGFBQUE7RUFDQSxhQUFBO0FDQ0o7O0FERUU7RUFDRSwyQkFBQTtFQUNBLGNBQUE7QUNDSjs7QURDRTtFQUNFLDBCQUFBO0VBQ0EsY0FBQTtBQ0VKOztBREFFO0VBQ0Msc0JBQUE7QUNHSDs7QURERTtFQUNFLHlCQUFBO0VBQ0EsOEJBQUE7RUFDQSxhQUFBO0VBQ0EsdUJBQUE7RUFDQSxZQUFBO0VBQ0EsV0FBQTtFQUNBLHNCQUFBO0FDSUo7O0FEREU7RUFDRSxzQkFBQTtFQUNBLDhCQUFBO0VBQ0EsYUFBQTtFQUNBLHVCQUFBO0VBQ0EsYUFBQTtFQUNBLGtCQUFBO0VBQ0EsWUFBQTtFQUNBLHNCQUFBO0FDSUo7O0FEREU7RUFDRSw0QkFBQTtFQUNBLHNCQUFBO0VBQ0EsZUFBQTtFQUNBLGNBQUE7RUFDQSxtQkFBQTtFQUNBLHdCQUFBO0VBQ0EsK0JBQUE7QUNJSjs7QURGRTtFQUNFLDJCQUFBO0VBQ0Esc0JBQUE7RUFDQSxlQUFBO0VBQ0EsY0FBQTtBQ0tKOztBREhFO0VBQ0UsNEJBQUE7QUNNSjs7QURKRTtFQUNFLFdBQUE7RUFDQSxjQUFBO0FDT0o7O0FESEU7RUFDRSx3QkFBQTtFQUNBLFdBQUE7RUFDQSxzQkFBQTtBQ01KOztBREpFO0VBQ0Usa0JBQUE7QUNPSjs7QURKRTtFQUNFLFlBQUE7QUNPSjs7QURKRTtFQUNFLGNBQUE7RUFDQSxlQUFBO0VBQ0Esa0JBQUE7QUNPSjs7QURIRTtFQUNFLGdCQUFBO0VBQ0EsYUFBQTtFQUNBLDZCQUFBO0FDTUo7O0FESEU7RUFDRSxlQUFBO0VBQ0EsVUFBQTtFQUNBLGVBQUE7RUFDQSx1QkFBQTtFQUNBLHVCQUFBO0FDTUo7O0FESEU7RUFDRSxXQUFBO0VBQ0EsV0FBQTtFQUVBLGFBQUE7RUFDQSxtQkFBQTtBQ0tKOztBREhFO0VBQ0ksbUJBQUE7QUNNTiIsImZpbGUiOiJzcmMvYXBwL25ld3MvbmV3cy1kZXRhaWwvbmV3cy1kZXRhaWwucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmRldGFpbHtcbiAgICBwYWRkaW5nOiAyMHB4ICFpbXBvcnRhbnQ7XG4gICAgLy8gaGVpZ2h0OiAyMDBweDtcbiAgfVxuICAuaW5mby1kb2N0b3J7XG4gICAgcGFkZGluZzogMTVweDtcbiAgICBoZWlnaHQ6IDE1MHB4O1xuICB9XG4gIFxuICBpb24tdGl0bGUge1xuICAgIHBvc2l0aW9uOiBzdGF0aWMgIWltcG9ydGFudDtcbiAgICBjb2xvcjogIzMzMkMyQjtcbiAgfVxuICAuc3BlY2lhbGlzdHtcbiAgICBmb250LXNpemU6IDEzcHggIWltcG9ydGFudDtcbiAgICBjb2xvcjogIzY5Njk2OTtcbiAgfVxuICAuY29udGFjdHtcbiAgIG1hcmdpbjogMHB4ICFpbXBvcnRhbnQ7XG4gIH1cbiAgLmltYWdlLWRvY3RvcntcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjRjZCQjdFO1xuICAgIGJvcmRlci1yYWRpdXM6IDIwcHggIWltcG9ydGFudDs7XG4gICAgcGFkZGluZzogMTBweDtcbiAgICB3aWR0aDogMTUwcHggIWltcG9ydGFudDtcbiAgICBoZWlnaHQ6IGF1dG87XG4gICAgZmxvYXQ6IGxlZnQ7XG4gICAgdmVydGljYWwtYWxpZ246bWlkZGxlO1xuICB9XG4gIFxuICAuaW1hZ2UtbWFwc3tcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZGRkO1xuICAgIGJvcmRlci1yYWRpdXM6IDIwcHggIWltcG9ydGFudDs7XG4gICAgcGFkZGluZzogMTBweDtcbiAgICB3aWR0aDogMTIwcHggIWltcG9ydGFudDtcbiAgICBoZWlnaHQ6IDE4MHB4O1xuICAgIG1hcmdpbi1yaWdodDogMTBweDtcbiAgICBmbG9hdDogcmlnaHQ7XG4gICAgdmVydGljYWwtYWxpZ246bWlkZGxlO1xuICB9XG4gIFxuICBwe1xuICAgIHBhZGRpbmc6IDBweCAyMHB4ICFpbXBvcnRhbnQ7XG4gICAgbWFyZ2luOiAwcHggIWltcG9ydGFudDtcbiAgICBmb250LXNpemU6IDEzcHg7XG4gICAgY29sb3I6ICM2OTY5Njk7XG4gICAgdGV4dC1hbGlnbjoganVzdGlmeTtcbiAgICB0ZXh0LWp1c3RpZnk6IGludGVyLXdvcmQ7XG4gICAgcGFkZGluZy1ib3R0b206IDEwcHggIWltcG9ydGFudDtcbiAgfVxuICAuaW5mb3tcbiAgICBwYWRkaW5nOiAwcHggNXB4ICFpbXBvcnRhbnQ7XG4gICAgbWFyZ2luOiAwcHggIWltcG9ydGFudDtcbiAgICBmb250LXNpemU6IDEzcHg7XG4gICAgY29sb3I6ICM2OTY5Njk7XG4gIH1cbiAgLmluZm8tZG9jdG9yIGg2e1xuICAgIHBhZGRpbmctbGVmdDogNXB4ICFpbXBvcnRhbnQ7XG4gIH1cbiAgLmFkZHJlc3MtZG9jdG9ye1xuICAgIGZsb2F0OiBsZWZ0O1xuICAgIG1heC13aWR0aDogNjAlO1xuICBcbiAgfVxuICBcbiAgLnRhYmxlLWluZm97XG4gICAgcGFkZGluZzogMjBweCAhaW1wb3J0YW50O1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGJvcmRlci1jb2xsYXBzZTogdW5zZXQ7XG4gIH1cbiAgLnRhYmxlLWluZm8gdHIgPiB0ZHtcbiAgICBwYWRkaW5nLWxlZnQ6IDEwcHg7XG4gIH1cbiAgXG4gIC50YWJsZS1pbmZvIHRyLnBpYyB0ZHtcbiAgICBwYWRkaW5nOiAwcHg7XG4gIH1cbiAgXG4gIC50YWJsZS1pbmZvIGgze1xuICAgIGNvbG9yOiAjMzMyQzJCO1xuICAgIG1hcmdpbi10b3A6IDBweDtcbiAgICBtYXJnaW4tYm90dG9tOiAwcHg7XG4gIFxuICB9XG4gIFxuICAuc2NoZWR1bGV7XG4gICAgbWFyZ2luLXRvcDogNTBweDtcbiAgICBwYWRkaW5nOiAyMHB4O1xuICAgIHBhZGRpbmctbGVmdDogMzVweCAhaW1wb3J0YW50O1xuICB9XG4gIFxuICAuYnRuLXNjaGVkdWxle1xuICAgIGZvbnQtc2l6ZTogMTJweDtcbiAgICB3aWR0aDogNDUlO1xuICAgIG1heC13aWR0aDogMTAwJTtcbiAgICB0ZXh0LXRyYW5zZm9ybTogaW5pdGlhbDtcbiAgICBjb2xvcjogd2hpdGUgIWltcG9ydGFudDtcbiAgfVxuXG4gIC5waWN0dXJlLW5ld3N7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiA3MCUgOyBcbiAgICAvL2JhY2tncm91bmQ6ICNGNkJCN0U7XG4gICAgcGFkZGluZzogMTBweDtcbiAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICB9XG4gIGg2e1xuICAgICAgcGFkZGluZy1yaWdodDogMjBweDtcbiAgfSIsIi5kZXRhaWwge1xuICBwYWRkaW5nOiAyMHB4ICFpbXBvcnRhbnQ7XG59XG5cbi5pbmZvLWRvY3RvciB7XG4gIHBhZGRpbmc6IDE1cHg7XG4gIGhlaWdodDogMTUwcHg7XG59XG5cbmlvbi10aXRsZSB7XG4gIHBvc2l0aW9uOiBzdGF0aWMgIWltcG9ydGFudDtcbiAgY29sb3I6ICMzMzJDMkI7XG59XG5cbi5zcGVjaWFsaXN0IHtcbiAgZm9udC1zaXplOiAxM3B4ICFpbXBvcnRhbnQ7XG4gIGNvbG9yOiAjNjk2OTY5O1xufVxuXG4uY29udGFjdCB7XG4gIG1hcmdpbjogMHB4ICFpbXBvcnRhbnQ7XG59XG5cbi5pbWFnZS1kb2N0b3Ige1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjRjZCQjdFO1xuICBib3JkZXItcmFkaXVzOiAyMHB4ICFpbXBvcnRhbnQ7XG4gIHBhZGRpbmc6IDEwcHg7XG4gIHdpZHRoOiAxNTBweCAhaW1wb3J0YW50O1xuICBoZWlnaHQ6IGF1dG87XG4gIGZsb2F0OiBsZWZ0O1xuICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xufVxuXG4uaW1hZ2UtbWFwcyB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNkZGQ7XG4gIGJvcmRlci1yYWRpdXM6IDIwcHggIWltcG9ydGFudDtcbiAgcGFkZGluZzogMTBweDtcbiAgd2lkdGg6IDEyMHB4ICFpbXBvcnRhbnQ7XG4gIGhlaWdodDogMTgwcHg7XG4gIG1hcmdpbi1yaWdodDogMTBweDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xufVxuXG5wIHtcbiAgcGFkZGluZzogMHB4IDIwcHggIWltcG9ydGFudDtcbiAgbWFyZ2luOiAwcHggIWltcG9ydGFudDtcbiAgZm9udC1zaXplOiAxM3B4O1xuICBjb2xvcjogIzY5Njk2OTtcbiAgdGV4dC1hbGlnbjoganVzdGlmeTtcbiAgdGV4dC1qdXN0aWZ5OiBpbnRlci13b3JkO1xuICBwYWRkaW5nLWJvdHRvbTogMTBweCAhaW1wb3J0YW50O1xufVxuXG4uaW5mbyB7XG4gIHBhZGRpbmc6IDBweCA1cHggIWltcG9ydGFudDtcbiAgbWFyZ2luOiAwcHggIWltcG9ydGFudDtcbiAgZm9udC1zaXplOiAxM3B4O1xuICBjb2xvcjogIzY5Njk2OTtcbn1cblxuLmluZm8tZG9jdG9yIGg2IHtcbiAgcGFkZGluZy1sZWZ0OiA1cHggIWltcG9ydGFudDtcbn1cblxuLmFkZHJlc3MtZG9jdG9yIHtcbiAgZmxvYXQ6IGxlZnQ7XG4gIG1heC13aWR0aDogNjAlO1xufVxuXG4udGFibGUtaW5mbyB7XG4gIHBhZGRpbmc6IDIwcHggIWltcG9ydGFudDtcbiAgd2lkdGg6IDEwMCU7XG4gIGJvcmRlci1jb2xsYXBzZTogdW5zZXQ7XG59XG5cbi50YWJsZS1pbmZvIHRyID4gdGQge1xuICBwYWRkaW5nLWxlZnQ6IDEwcHg7XG59XG5cbi50YWJsZS1pbmZvIHRyLnBpYyB0ZCB7XG4gIHBhZGRpbmc6IDBweDtcbn1cblxuLnRhYmxlLWluZm8gaDMge1xuICBjb2xvcjogIzMzMkMyQjtcbiAgbWFyZ2luLXRvcDogMHB4O1xuICBtYXJnaW4tYm90dG9tOiAwcHg7XG59XG5cbi5zY2hlZHVsZSB7XG4gIG1hcmdpbi10b3A6IDUwcHg7XG4gIHBhZGRpbmc6IDIwcHg7XG4gIHBhZGRpbmctbGVmdDogMzVweCAhaW1wb3J0YW50O1xufVxuXG4uYnRuLXNjaGVkdWxlIHtcbiAgZm9udC1zaXplOiAxMnB4O1xuICB3aWR0aDogNDUlO1xuICBtYXgtd2lkdGg6IDEwMCU7XG4gIHRleHQtdHJhbnNmb3JtOiBpbml0aWFsO1xuICBjb2xvcjogd2hpdGUgIWltcG9ydGFudDtcbn1cblxuLnBpY3R1cmUtbmV3cyB7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDcwJTtcbiAgcGFkZGluZzogMTBweDtcbiAgYm9yZGVyLXJhZGl1czogMTBweDtcbn1cblxuaDYge1xuICBwYWRkaW5nLXJpZ2h0OiAyMHB4O1xufSJdfQ== */";
     /***/
   },
 
@@ -1288,31 +1221,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! @ionic/angular */
     "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
 
-    var NewsDetailPage = /*#__PURE__*/function () {
-      function NewsDetailPage(modalCtrl) {
-        _classCallCheck(this, NewsDetailPage);
-
+    let NewsDetailPage = class NewsDetailPage {
+      constructor(modalCtrl) {
         this.modalCtrl = modalCtrl;
       }
 
-      _createClass(NewsDetailPage, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {}
-      }, {
-        key: "closePage",
-        value: function closePage() {
-          this.modalCtrl.dismiss();
-        }
-      }]);
+      ngOnInit() {}
 
-      return NewsDetailPage;
-    }();
+      closePage() {
+        this.modalCtrl.dismiss();
+      }
 
-    NewsDetailPage.ctorParameters = function () {
-      return [{
-        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"]
-      }];
     };
+
+    NewsDetailPage.ctorParameters = () => [{
+      type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"]
+    }];
 
     NewsDetailPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-news-detail',
@@ -1355,7 +1279,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     // The list of file replacements can be found in `angular.json`.
 
 
-    var environment = {
+    const environment = {
       production: false
     };
     /*
@@ -1418,9 +1342,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["enableProdMode"])();
     }
 
-    Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_3__["AppModule"]).catch(function (err) {
-      return console.log(err);
-    });
+    Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_3__["AppModule"]).catch(err => console.log(err));
     /***/
   },
 
@@ -1435,7 +1357,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   /***/
   function _(module, exports, __webpack_require__) {
     module.exports = __webpack_require__(
-    /*! /Users/lab601/Documents/UTS_09_34_36/Odoc/src/main.ts */
+    /*! C:\Users\ferry\Documents\Ionic Project\Odoc\src\main.ts */
     "./src/main.ts");
     /***/
   }

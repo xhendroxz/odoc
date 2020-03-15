@@ -1,5 +1,3 @@
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["doctor-detail-detail-module"], {
   /***/
   "./src/app/doctor/detail/detail-routing.module.ts":
@@ -45,15 +43,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ./detail.page */
     "./src/app/doctor/detail/detail.page.ts");
 
-    var routes = [{
+    const routes = [{
       path: '',
       component: _detail_page__WEBPACK_IMPORTED_MODULE_3__["DetailPage"]
     }];
-
-    var DetailPageRoutingModule = function DetailPageRoutingModule() {
-      _classCallCheck(this, DetailPageRoutingModule);
-    };
-
+    let DetailPageRoutingModule = class DetailPageRoutingModule {};
     DetailPageRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
       imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(routes)],
       exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
@@ -123,10 +117,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! ./detail.page */
     "./src/app/doctor/detail/detail.page.ts");
 
-    var DetailPageModule = function DetailPageModule() {
-      _classCallCheck(this, DetailPageModule);
-    };
-
+    let DetailPageModule = class DetailPageModule {};
     DetailPageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
       imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _detail_routing_module__WEBPACK_IMPORTED_MODULE_5__["DetailPageRoutingModule"]],
       declarations: [_detail_page__WEBPACK_IMPORTED_MODULE_6__["DetailPage"]]

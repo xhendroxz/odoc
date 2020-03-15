@@ -110,135 +110,9 @@ const hapticSelectionEnd = () => {
 
 /***/ }),
 
-/***/ "./node_modules/@ionic/core/dist/esm/index-3476b023.js":
+/***/ "./node_modules/@ionic/core/dist/esm/index-1469ea79.js":
 /*!*************************************************************!*\
-  !*** ./node_modules/@ionic/core/dist/esm/index-3476b023.js ***!
-  \*************************************************************/
-/*! exports provided: s */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return sanitizeDOMString; });
-/**
- * Does a simple sanitization of all elements
- * in an untrusted string
- */
-const sanitizeDOMString = (untrustedString) => {
-    try {
-        if (typeof untrustedString !== 'string' || untrustedString === '') {
-            return untrustedString;
-        }
-        /**
-         * Create a document fragment
-         * separate from the main DOM,
-         * create a div to do our work in
-         */
-        const documentFragment = document.createDocumentFragment();
-        const workingDiv = document.createElement('div');
-        documentFragment.appendChild(workingDiv);
-        workingDiv.innerHTML = untrustedString;
-        /**
-         * Remove any elements
-         * that are blocked
-         */
-        blockedTags.forEach(blockedTag => {
-            const getElementsToRemove = documentFragment.querySelectorAll(blockedTag);
-            for (let elementIndex = getElementsToRemove.length - 1; elementIndex >= 0; elementIndex--) {
-                const element = getElementsToRemove[elementIndex];
-                if (element.parentNode) {
-                    element.parentNode.removeChild(element);
-                }
-                else {
-                    documentFragment.removeChild(element);
-                }
-                /**
-                 * We still need to sanitize
-                 * the children of this element
-                 * as they are left behind
-                 */
-                const childElements = getElementChildren(element);
-                /* tslint:disable-next-line */
-                for (let childIndex = 0; childIndex < childElements.length; childIndex++) {
-                    sanitizeElement(childElements[childIndex]);
-                }
-            }
-        });
-        /**
-         * Go through remaining elements and remove
-         * non-allowed attribs
-         */
-        // IE does not support .children on document fragments, only .childNodes
-        const dfChildren = getElementChildren(documentFragment);
-        /* tslint:disable-next-line */
-        for (let childIndex = 0; childIndex < dfChildren.length; childIndex++) {
-            sanitizeElement(dfChildren[childIndex]);
-        }
-        // Append document fragment to div
-        const fragmentDiv = document.createElement('div');
-        fragmentDiv.appendChild(documentFragment);
-        // First child is always the div we did our work in
-        const getInnerDiv = fragmentDiv.querySelector('div');
-        return (getInnerDiv !== null) ? getInnerDiv.innerHTML : fragmentDiv.innerHTML;
-    }
-    catch (err) {
-        console.error(err);
-        return '';
-    }
-};
-/**
- * Clean up current element based on allowed attributes
- * and then recursively dig down into any child elements to
- * clean those up as well
- */
-const sanitizeElement = (element) => {
-    // IE uses childNodes, so ignore nodes that are not elements
-    if (element.nodeType && element.nodeType !== 1) {
-        return;
-    }
-    for (let i = element.attributes.length - 1; i >= 0; i--) {
-        const attribute = element.attributes.item(i);
-        const attributeName = attribute.name;
-        // remove non-allowed attribs
-        if (!allowedAttributes.includes(attributeName.toLowerCase())) {
-            element.removeAttribute(attributeName);
-            continue;
-        }
-        // clean up any allowed attribs
-        // that attempt to do any JS funny-business
-        const attributeValue = attribute.value;
-        /* tslint:disable-next-line */
-        if (attributeValue != null && attributeValue.toLowerCase().includes('javascript:')) {
-            element.removeAttribute(attributeName);
-        }
-    }
-    /**
-     * Sanitize any nested children
-     */
-    const childElements = getElementChildren(element);
-    /* tslint:disable-next-line */
-    for (let i = 0; i < childElements.length; i++) {
-        sanitizeElement(childElements[i]);
-    }
-};
-/**
- * IE doesn't always support .children
- * so we revert to .childNodes instead
- */
-const getElementChildren = (el) => {
-    return (el.children != null) ? el.children : el.childNodes;
-};
-const allowedAttributes = ['class', 'id', 'href', 'src', 'name', 'slot'];
-const blockedTags = ['script', 'style', 'iframe', 'meta', 'link', 'object', 'embed'];
-
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@ionic/core/dist/esm/index-4e2fa3c6.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/@ionic/core/dist/esm/index-4e2fa3c6.js ***!
+  !*** ./node_modules/@ionic/core/dist/esm/index-1469ea79.js ***!
   \*************************************************************/
 /*! exports provided: d, g, l, s, t */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -255,8 +129,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const iosTransitionAnimation = () => __webpack_require__.e(/*! import() | ios-transition-179652bb-js */ "ios-transition-179652bb-js").then(__webpack_require__.bind(null, /*! ./ios.transition-179652bb.js */ "./node_modules/@ionic/core/dist/esm/ios.transition-179652bb.js"));
-const mdTransitionAnimation = () => __webpack_require__.e(/*! import() | md-transition-91524c12-js */ "md-transition-91524c12-js").then(__webpack_require__.bind(null, /*! ./md.transition-91524c12.js */ "./node_modules/@ionic/core/dist/esm/md.transition-91524c12.js"));
+const iosTransitionAnimation = () => __webpack_require__.e(/*! import() | ios-transition-b4752795-js */ "ios-transition-b4752795-js").then(__webpack_require__.bind(null, /*! ./ios.transition-b4752795.js */ "./node_modules/@ionic/core/dist/esm/ios.transition-b4752795.js"));
+const mdTransitionAnimation = () => __webpack_require__.e(/*! import() | md-transition-5ee3c425-js */ "md-transition-5ee3c425-js").then(__webpack_require__.bind(null, /*! ./md.transition-5ee3c425.js */ "./node_modules/@ionic/core/dist/esm/md.transition-5ee3c425.js"));
 const transition = (opts) => {
     return new Promise((resolve, reject) => {
         Object(_core_0a8d4d2e_js__WEBPACK_IMPORTED_MODULE_0__["w"])(() => {
@@ -447,6 +321,132 @@ const getIonPageElement = (element) => {
     // idk, return the original element so at least something animates and we don't have a null pointer
     return element;
 };
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@ionic/core/dist/esm/index-3476b023.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/@ionic/core/dist/esm/index-3476b023.js ***!
+  \*************************************************************/
+/*! exports provided: s */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return sanitizeDOMString; });
+/**
+ * Does a simple sanitization of all elements
+ * in an untrusted string
+ */
+const sanitizeDOMString = (untrustedString) => {
+    try {
+        if (typeof untrustedString !== 'string' || untrustedString === '') {
+            return untrustedString;
+        }
+        /**
+         * Create a document fragment
+         * separate from the main DOM,
+         * create a div to do our work in
+         */
+        const documentFragment = document.createDocumentFragment();
+        const workingDiv = document.createElement('div');
+        documentFragment.appendChild(workingDiv);
+        workingDiv.innerHTML = untrustedString;
+        /**
+         * Remove any elements
+         * that are blocked
+         */
+        blockedTags.forEach(blockedTag => {
+            const getElementsToRemove = documentFragment.querySelectorAll(blockedTag);
+            for (let elementIndex = getElementsToRemove.length - 1; elementIndex >= 0; elementIndex--) {
+                const element = getElementsToRemove[elementIndex];
+                if (element.parentNode) {
+                    element.parentNode.removeChild(element);
+                }
+                else {
+                    documentFragment.removeChild(element);
+                }
+                /**
+                 * We still need to sanitize
+                 * the children of this element
+                 * as they are left behind
+                 */
+                const childElements = getElementChildren(element);
+                /* tslint:disable-next-line */
+                for (let childIndex = 0; childIndex < childElements.length; childIndex++) {
+                    sanitizeElement(childElements[childIndex]);
+                }
+            }
+        });
+        /**
+         * Go through remaining elements and remove
+         * non-allowed attribs
+         */
+        // IE does not support .children on document fragments, only .childNodes
+        const dfChildren = getElementChildren(documentFragment);
+        /* tslint:disable-next-line */
+        for (let childIndex = 0; childIndex < dfChildren.length; childIndex++) {
+            sanitizeElement(dfChildren[childIndex]);
+        }
+        // Append document fragment to div
+        const fragmentDiv = document.createElement('div');
+        fragmentDiv.appendChild(documentFragment);
+        // First child is always the div we did our work in
+        const getInnerDiv = fragmentDiv.querySelector('div');
+        return (getInnerDiv !== null) ? getInnerDiv.innerHTML : fragmentDiv.innerHTML;
+    }
+    catch (err) {
+        console.error(err);
+        return '';
+    }
+};
+/**
+ * Clean up current element based on allowed attributes
+ * and then recursively dig down into any child elements to
+ * clean those up as well
+ */
+const sanitizeElement = (element) => {
+    // IE uses childNodes, so ignore nodes that are not elements
+    if (element.nodeType && element.nodeType !== 1) {
+        return;
+    }
+    for (let i = element.attributes.length - 1; i >= 0; i--) {
+        const attribute = element.attributes.item(i);
+        const attributeName = attribute.name;
+        // remove non-allowed attribs
+        if (!allowedAttributes.includes(attributeName.toLowerCase())) {
+            element.removeAttribute(attributeName);
+            continue;
+        }
+        // clean up any allowed attribs
+        // that attempt to do any JS funny-business
+        const attributeValue = attribute.value;
+        /* tslint:disable-next-line */
+        if (attributeValue != null && attributeValue.toLowerCase().includes('javascript:')) {
+            element.removeAttribute(attributeName);
+        }
+    }
+    /**
+     * Sanitize any nested children
+     */
+    const childElements = getElementChildren(element);
+    /* tslint:disable-next-line */
+    for (let i = 0; i < childElements.length; i++) {
+        sanitizeElement(childElements[i]);
+    }
+};
+/**
+ * IE doesn't always support .children
+ * so we revert to .childNodes instead
+ */
+const getElementChildren = (el) => {
+    return (el.children != null) ? el.children : el.childNodes;
+};
+const allowedAttributes = ['class', 'id', 'href', 'src', 'name', 'slot'];
+const blockedTags = ['script', 'style', 'iframe', 'meta', 'link', 'object', 'embed'];
 
 
 
@@ -658,7 +658,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("#container {\n  text-align: center;\n  position: absolute;\n  left: 0;\n  right: 0;\n  top: 50%;\n  -webkit-transform: translateY(-50%);\n          transform: translateY(-50%); }\n\n#container strong {\n  font-size: 20px;\n  line-height: 26px; }\n\n#container p {\n  font-size: 16px;\n  line-height: 22px;\n  color: #8c8c8c;\n  margin: 0; }\n\n#container a {\n  text-decoration: none; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9sYWI2MDEvRG9jdW1lbnRzL1VUU18wOV8zNF8zNi9PZG9jL3NyYy9hcHAvZXhwbG9yZS1jb250YWluZXIvZXhwbG9yZS1jb250YWluZXIuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxrQkFBa0I7RUFFbEIsa0JBQWtCO0VBQ2xCLE9BQU87RUFDUCxRQUFRO0VBQ1IsUUFBUTtFQUNSLG1DQUEyQjtVQUEzQiwyQkFBMkIsRUFBQTs7QUFHN0I7RUFDRSxlQUFlO0VBQ2YsaUJBQWlCLEVBQUE7O0FBR25CO0VBQ0UsZUFBZTtFQUNmLGlCQUFpQjtFQUVqQixjQUFjO0VBRWQsU0FBUyxFQUFBOztBQUdYO0VBQ0UscUJBQXFCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9leHBsb3JlLWNvbnRhaW5lci9leHBsb3JlLWNvbnRhaW5lci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIiNjb250YWluZXIge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG5cbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBsZWZ0OiAwO1xuICByaWdodDogMDtcbiAgdG9wOiA1MCU7XG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtNTAlKTtcbn1cblxuI2NvbnRhaW5lciBzdHJvbmcge1xuICBmb250LXNpemU6IDIwcHg7XG4gIGxpbmUtaGVpZ2h0OiAyNnB4O1xufVxuXG4jY29udGFpbmVyIHAge1xuICBmb250LXNpemU6IDE2cHg7XG4gIGxpbmUtaGVpZ2h0OiAyMnB4O1xuXG4gIGNvbG9yOiAjOGM4YzhjO1xuXG4gIG1hcmdpbjogMDtcbn1cblxuI2NvbnRhaW5lciBhIHtcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xufSJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("#container {\n  text-align: center;\n  position: absolute;\n  left: 0;\n  right: 0;\n  top: 50%;\n  -webkit-transform: translateY(-50%);\n          transform: translateY(-50%);\n}\n\n#container strong {\n  font-size: 20px;\n  line-height: 26px;\n}\n\n#container p {\n  font-size: 16px;\n  line-height: 22px;\n  color: #8c8c8c;\n  margin: 0;\n}\n\n#container a {\n  text-decoration: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZXhwbG9yZS1jb250YWluZXIvQzpcXFVzZXJzXFxmZXJyeVxcRG9jdW1lbnRzXFxJb25pYyBQcm9qZWN0XFxPZG9jL3NyY1xcYXBwXFxleHBsb3JlLWNvbnRhaW5lclxcZXhwbG9yZS1jb250YWluZXIuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2V4cGxvcmUtY29udGFpbmVyL2V4cGxvcmUtY29udGFpbmVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usa0JBQUE7RUFFQSxrQkFBQTtFQUNBLE9BQUE7RUFDQSxRQUFBO0VBQ0EsUUFBQTtFQUNBLG1DQUFBO1VBQUEsMkJBQUE7QUNBRjs7QURHQTtFQUNFLGVBQUE7RUFDQSxpQkFBQTtBQ0FGOztBREdBO0VBQ0UsZUFBQTtFQUNBLGlCQUFBO0VBRUEsY0FBQTtFQUVBLFNBQUE7QUNGRjs7QURLQTtFQUNFLHFCQUFBO0FDRkYiLCJmaWxlIjoic3JjL2FwcC9leHBsb3JlLWNvbnRhaW5lci9leHBsb3JlLWNvbnRhaW5lci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIiNjb250YWluZXIge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG5cbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBsZWZ0OiAwO1xuICByaWdodDogMDtcbiAgdG9wOiA1MCU7XG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtNTAlKTtcbn1cblxuI2NvbnRhaW5lciBzdHJvbmcge1xuICBmb250LXNpemU6IDIwcHg7XG4gIGxpbmUtaGVpZ2h0OiAyNnB4O1xufVxuXG4jY29udGFpbmVyIHAge1xuICBmb250LXNpemU6IDE2cHg7XG4gIGxpbmUtaGVpZ2h0OiAyMnB4O1xuXG4gIGNvbG9yOiAjOGM4YzhjO1xuXG4gIG1hcmdpbjogMDtcbn1cblxuI2NvbnRhaW5lciBhIHtcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xufSIsIiNjb250YWluZXIge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgbGVmdDogMDtcbiAgcmlnaHQ6IDA7XG4gIHRvcDogNTAlO1xuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoLTUwJSk7XG59XG5cbiNjb250YWluZXIgc3Ryb25nIHtcbiAgZm9udC1zaXplOiAyMHB4O1xuICBsaW5lLWhlaWdodDogMjZweDtcbn1cblxuI2NvbnRhaW5lciBwIHtcbiAgZm9udC1zaXplOiAxNnB4O1xuICBsaW5lLWhlaWdodDogMjJweDtcbiAgY29sb3I6ICM4YzhjOGM7XG4gIG1hcmdpbjogMDtcbn1cblxuI2NvbnRhaW5lciBhIHtcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xufSJdfQ== */");
 
 /***/ }),
 

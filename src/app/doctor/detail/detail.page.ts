@@ -8,6 +8,9 @@ import { ModalController } from '@ionic/angular';
 })
 export class DetailPage implements OnInit {
 
+  opt: any;
+  textBtn = 'View List Of Schedule';
+
   constructor(
     private modalCtrl: ModalController,
   ) { }
@@ -17,6 +20,17 @@ export class DetailPage implements OnInit {
 
   closePage() {
     this.modalCtrl.dismiss();
+  }
+
+  schedule() {
+    if(this.opt == true){
+      this.textBtn = 'View List Of Schedule';
+      this.opt = false;
+    }
+    else{
+      this.textBtn = 'Close List Of Schedule';
+      this.opt = true;
+    }
   }
 
 }
